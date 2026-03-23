@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
 import { Check, Star, ArrowRight, Rocket, Globe, Video, Target, Users } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const secondaryServices = [
     {
@@ -68,26 +68,7 @@ export const PlanCard = ({ plan, billingCycle }) => {
     const price = billingCycle === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice;
     const period = billingCycle === 'monthly' ? '/mo' : '/yr';
 
-    // --- NAVIGATION LOGIC ---
-    const handlePlanClick = () => {
-        let path = '/plans';
-
-        switch (plan.name) {
-            case 'Growth Engine':
-                path = '/plans/growth-engine-plans';
-                break;
-            case 'Performance Acc.':
-                path = '/plans/performance-accelerator-plans';
-                break;
-            case 'Market Leader':
-                path = '/plans/market-leader-plans';
-                break;
-            default:
-                path = '/plans';
-        }
-
-        navigate(path);
-    };
+    // NAVIGATION LOGIC removed as handlePlanClick is now handle via Link directly.
 
     return (
         <motion.div
@@ -132,13 +113,13 @@ export const PlanCard = ({ plan, billingCycle }) => {
                         </li>
                     ))}
                 </ul>
-                <button
-                    onClick={handlePlanClick}
-                    className={`relative w-full py-4 rounded-xl font-bold text-sm max-[321px]:text-[12px] tracking-wide uppercase transition-all duration-300 group/btn overflow-hidden cursor-pointer ${plan.recommended ? 'bg-white text-slate-950 hover:bg-violet-50 shadow-[0_0_30px_rgba(255,255,255,0.3)]' : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'}`}
+                <Link
+                    to={plan.name === 'Growth Engine' ? '/plans/growth-engine-plans' : plan.name === 'Performance Acc.' ? '/plans/performance-accelerator-plans' : plan.name === 'Market Leader' ? '/plans/market-leader-plans' : '/plans'}
+                    className={`relative w-full py-4 rounded-xl font-bold text-sm max-[321px]:text-[12px] tracking-wide uppercase transition-all duration-300 group/btn overflow-hidden cursor-pointer flex items-center justify-center ${plan.recommended ? 'bg-white text-slate-950 hover:bg-violet-50 shadow-[0_0_30px_rgba(255,255,255,0.3)]' : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'}`}
                 >
                     <span className="relative z-10 flex items-center justify-center gap-2">Choose {plan.name} <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" /></span>
                     <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
-                </button>
+                </Link>
             </div>
         </motion.div>
     );
@@ -211,16 +192,20 @@ const Plan = () => {
                             Take your business from its current state to absolute market leadership. Our comprehensive plans cover everything from custom website development to advanced omnichannel advertising, AI automation, and beyond.
                         </motion.p>
 
-                        <motion.button
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.5 }}
-                            onClick={() => navigate('/plans/all-plans')}
-                            className="relative px-10 py-5 rounded-full font-bold text-lg max-[426px]:text-sm uppercase tracking-wide bg-white text-slate-950 hover:bg-violet-50 transition-all duration-300 shadow-[0_0_40px_rgba(139,92,246,0.4)] hover:shadow-[0_0_70px_rgba(139,92,246,0.6)] hover:-translate-y-1 overflow-hidden group/btn z-10 flex items-center gap-3 cursor-pointer"
+                        <Link
+                            to="/plans/all-plans"
+                            className="relative block max-w-fit mx-auto"
                         >
-                            <span className="relative z-10 flex items-center gap-2">Explore All Plans <Rocket className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" /></span>
-                            <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-violet-500/20 to-transparent skew-x-12" />
-                        </motion.button>
+                            <motion.div
+                                initial={{ y: 20, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ delay: 0.5 }}
+                                className="relative px-10 py-5 rounded-full font-bold text-lg max-[426px]:text-sm uppercase tracking-wide bg-white text-slate-950 hover:bg-violet-50 transition-all duration-300 shadow-[0_0_40px_rgba(139,92,246,0.4)] hover:shadow-[0_0_70px_rgba(139,92,246,0.6)] hover:-translate-y-1 overflow-hidden group/btn z-10 flex items-center gap-3 cursor-pointer"
+                            >
+                                <span className="relative z-10 flex items-center gap-2">Explore All Plans <Rocket className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" /></span>
+                                <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-violet-500/20 to-transparent skew-x-12" />
+                            </motion.div>
+                        </Link>
                     </div>
                 </motion.div>
 
@@ -263,36 +248,40 @@ const Plan = () => {
                     {/* SECONDARY PACKAGES GRID */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 mb-20 max-w-7xl mx-auto">
                         {secondaryServices.map((service, index) => (
-                            <motion.div
+                            <Link
                                 key={service.id}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1, duration: 0.5 }}
-                                onClick={() => navigate(`/plans/${service.path}`)}
-                                className="group relative flex flex-col p-8 rounded-[2rem] bg-slate-900/50 border border-white/5 hover:border-white/20 hover:bg-slate-900/80 transition-all duration-500 cursor-pointer overflow-hidden backdrop-blur-md"
+                                to={`/plans/${service.path}`}
+                                className="group relative flex flex-col"
                             >
-                                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                                    className="h-full flex flex-col p-8 rounded-[2rem] bg-slate-900/50 border border-white/5 hover:border-white/20 hover:bg-slate-900/80 transition-all duration-500 cursor-pointer overflow-hidden backdrop-blur-md"
+                                >
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
 
-                                <div className="relative z-10 flex-grow">
-                                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} p-[1px] mb-8 group-hover:scale-110 transition-transform duration-500 ease-out ${service.shadow}`}>
-                                        <div className="w-full h-full bg-slate-950 rounded-[15px] flex items-center justify-center">
-                                            <service.icon className="w-6 h-6 text-white" />
+                                    <div className="relative z-10 flex-grow">
+                                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} p-[1px] mb-8 group-hover:scale-110 transition-transform duration-500 ease-out ${service.shadow}`}>
+                                            <div className="w-full h-full bg-slate-950 rounded-[15px] flex items-center justify-center">
+                                                <service.icon className="w-6 h-6 text-white" />
+                                            </div>
                                         </div>
+                                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-300 transition-all duration-300">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-slate-400 text-sm leading-relaxed mb-8">
+                                            {service.desc}
+                                        </p>
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-300 transition-all duration-300">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-slate-400 text-sm leading-relaxed mb-8">
-                                        {service.desc}
-                                    </p>
-                                </div>
 
-                                <div className="relative z-10 flex items-center text-sm font-bold text-white mt-auto pt-6 border-t border-white/5 group-hover:border-white/10 transition-colors">
-                                    <span className="group-hover:mr-2 transition-all duration-300">View Packages</span>
-                                    <ArrowRight className="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-white" />
-                                </div>
-                            </motion.div>
+                                    <div className="relative z-10 flex items-center text-sm font-bold text-white mt-auto pt-6 border-t border-white/5 group-hover:border-white/10 transition-colors">
+                                        <span className="group-hover:mr-2 transition-all duration-300">View Packages</span>
+                                        <ArrowRight className="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-white" />
+                                    </div>
+                                </motion.div>
+                            </Link>
                         ))}
                     </div>
                 </div>

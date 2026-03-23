@@ -89,17 +89,15 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/plans">
-            <Route index element={<Plans />} />
-            <Route path="all-plans" element={<AllPlansPage />} />
-            <Route path="growth-engine-plans" element={<GrowthEngine />} />
-            <Route path="performance-accelerator-plans" element={<PerformanceAcc />} />
-            <Route path="market-leader-plans" element={<MarketLeader />} />
-            <Route path="website-development" element={<SecondaryPlanPage category="web" />} />
-            <Route path="creatives-reels" element={<SecondaryPlanPage category="creatives" />} />
-            <Route path="ads-management" element={<SecondaryPlanPage category="ads" />} />
-            <Route path="social-management" element={<SecondaryPlanPage category="social" />} />
-          </Route>
+          <Route path="/plans" element={<Plans />} />
+          <Route path="/plans/all-plans" element={<AllPlansPage />} />
+          <Route path="/plans/growth-engine-plans" element={<GrowthEngine />} />
+          <Route path="/plans/performance-accelerator-plans" element={<PerformanceAcc />} />
+          <Route path="/plans/market-leader-plans" element={<MarketLeader />} />
+          <Route path="/plans/website-development" element={<SecondaryPlanPage category="web" />} />
+          <Route path="/plans/creatives-reels" element={<SecondaryPlanPage category="creatives" />} />
+          <Route path="/plans/ads-management" element={<SecondaryPlanPage category="ads" />} />
+          <Route path="/plans/social-management" element={<SecondaryPlanPage category="social" />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/new-year-offers" element={<NewYear />} />
           <Route path="/starter-pack-offers" element={<StarterPackOffers />} />
