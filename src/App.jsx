@@ -91,10 +91,10 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/plans">
             <Route index element={<Plans />} />
-            <Route path="all" element={<AllPlansPage />} />
-            <Route path="growth-engine-plan" element={<GrowthEngine />} />
-            <Route path="performance-accelerator-plan" element={<PerformanceAcc />} />
-            <Route path="market-leader-plan" element={<MarketLeader />} />
+            <Route path="all-plans" element={<AllPlansPage />} />
+            <Route path="growth-engine-plans" element={<GrowthEngine />} />
+            <Route path="performance-accelerator-plans" element={<PerformanceAcc />} />
+            <Route path="market-leader-plans" element={<MarketLeader />} />
             <Route path="website-development" element={<SecondaryPlanPage category="web" />} />
             <Route path="creatives-reels" element={<SecondaryPlanPage category="creatives" />} />
             <Route path="ads-management" element={<SecondaryPlanPage category="ads" />} />

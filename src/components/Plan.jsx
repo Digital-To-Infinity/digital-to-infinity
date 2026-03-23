@@ -16,7 +16,7 @@ const secondaryServices = [
     {
         id: 'creatives',
         title: 'Creatives & Reels',
-        path: 'creatives & reels',
+        path: 'creatives-reels',
         desc: 'Viral-worthy short-form content and premium graphic design.',
         icon: Video,
         color: 'from-fuchsia-400 to-pink-400',

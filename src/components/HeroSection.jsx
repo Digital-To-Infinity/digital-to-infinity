@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { ArrowRight, Play, Sparkles, TrendingUp, Zap, Star } from 'lucide-react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'; 
 import { companyInfo, platforms } from '../data/mock';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
     // OPTIMIZATION: Use MotionValues instead of State to prevent re-renders
@@ -127,15 +128,15 @@ const HeroSection = () => {
                             </a>
 
                             {/* Secondary Button (View Plans) */}
-                            <a
-                                href="/plans"
+                            <Link
+                                to="/plans"
                                 className="group px-8 py-2.5 text-lg font-medium text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-105 flex items-center gap-2"
                             >
                                 <div className="p-1 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
                                     <Play className="w-4 h-4 fill-current" />
                                 </div>
                                 View Plans
-                            </a>
+                            </Link>
 
                         </div>
 

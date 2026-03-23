@@ -1,6 +1,7 @@
 import { Rocket, Instagram, Facebook, Linkedin, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 import { companyInfo } from '../data/mock';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import footerLogo from "../assets/footer-logo.jpg";
 
 const Footer = () => {
@@ -111,12 +112,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.plans.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-white/60 hover:text-white transition-colors duration-300 hover:pl-2"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -128,12 +129,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-white/60 hover:text-white transition-colors duration-300 hover:pl-2"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -145,12 +146,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.support.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-white/60 hover:text-white transition-colors duration-300 hover:pl-2"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

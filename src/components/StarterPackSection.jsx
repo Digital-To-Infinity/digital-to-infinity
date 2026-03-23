@@ -3,7 +3,7 @@ import { Check, Star, Sparkles, Gift, Clock, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { starterPackFeatures, images } from '../data/mock';
 import ContactPopup from "../components/ContactPopup";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const StarterPackSection = () => {
 
@@ -129,12 +129,12 @@ const StarterPackSection = () => {
                                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </button>
 
-                                <a
-                                    href="/plans"
+                                <Link
+                                    to="/plans"
                                     className="inline-flex items-center justify-center px-8 py-2.5 max-[321px]:py-2 text-lg font-medium text-white border border-white/30 rounded-2xl hover:bg-white hover:text-violet-600 transition-all duration-300 backdrop-blur-sm"
                                 >
                                     View All Plans
-                                </a>
+                                </Link>
                             </div>
                         </motion.div>
 
