@@ -5,10 +5,10 @@ import Footer from '../components/common/Footer';
 import ContactPopup from '../components/contact/ContactPopup';
 import { servicesData } from '../data/mock';
 import ServiceHero from '../components/serviceDetail/ServiceHero';
-import ServiceFeatures from '../components/serviceDetail/ServiceFeatures';
 import ServiceStack from '../components/serviceDetail/ServiceStack';
 import ServiceBenefits from '../components/serviceDetail/ServiceBenefits';
 import ServiceCTA from '../components/serviceDetail/ServiceCTA';
+import SocialMediaTeam from '../components/serviceDetail/SocialMediaTeam';
 
 const ServiceDetail = () => {
     const { slug } = useParams();
@@ -41,9 +41,9 @@ const ServiceDetail = () => {
                 setContactOpen={setContactOpen} 
             />
 
-            {/* <ServiceFeatures 
-                service={service} 
-            /> */}
+            {service.slug === 'social-media-marketing' && (
+                <SocialMediaTeam setContactOpen={setContactOpen} />
+            )}
 
             <ServiceBenefits />
 
