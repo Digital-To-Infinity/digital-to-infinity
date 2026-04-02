@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Check, Star, Sparkles, Gift, Clock, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { starterPackFeatures, images } from '../data/mock';
-import ContactPopup from "../components/ContactPopup";
+import { starterPackFeatures, images } from '../../data/mock';
+import ContactPopup from "../contact/ContactPopup";
 import { useNavigate, Link } from 'react-router-dom';
 
 const StarterPackSection = () => {

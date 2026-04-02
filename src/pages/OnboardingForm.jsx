@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Building2, User, Target, Package, Check, ArrowRight, ArrowLeft, Globe,
@@ -115,25 +115,24 @@ const StepWrapper = ({ children, title, subtitle, icon: Icon }) => (
 
 const CustomDropdown = ({ options, value, onChange, placeholder, label, name, icon: Icon, error }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
+    const timeoutRef = useRef(null);
 
-    useEffect(() => {
-        let timeout;
-        if (isHovered) {
-            setIsOpen(true);
-        } else {
-            timeout = setTimeout(() => setIsOpen(false), 200);
-        }
-        return () => clearTimeout(timeout);
-    }, [isHovered]);
+    const handleMouseEnter = () => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        setIsOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        timeoutRef.current = setTimeout(() => setIsOpen(false), 200);
+    };
 
     const errorClasses = error ? "ring-2 ring-red-500/50 border-red-500/50" : "border-white/10 hover:border-white/20";
 
     return (
         <div
             className="relative"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
             {label && <label className="block text-sm font-medium text-slate-300 mb-2 ml-1">{label}</label>}
             <div
@@ -182,7 +181,6 @@ const CustomDropdown = ({ options, value, onChange, placeholder, label, name, ic
                                     onClick={() => {
                                         onChange({ target: { name, value: option } });
                                         setIsOpen(false);
-                                        setIsHovered(false);
                                     }}
                                     className={`px-4 py-2.5 cursor-pointer text-sm transition-colors flex items-center justify-between ${value === option ? 'text-violet-400 bg-violet-500/10' : 'text-slate-300'}`}
                                 >

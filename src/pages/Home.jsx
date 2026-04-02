@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
-import ServicesSection from "../components/ServicesSection";
-import StarterPackSection from "../components/StarterPackSection";
-import StatsSection from "../components/StatsSection";
-import PricingSection from "../components/PricingSection";
-import ContactSection from "../components/ContactSection";
-import Footer from "../components/Footer";
+import Navbar from "../components/common/Navbar";
+import HeroSection from "../components/home/HeroSection";
+import ServicesSection from "../components/services/ServicesSection";
+import StarterPackSection from "../components/plans/StarterPackSection";
+import StatsSection from "../components/home/StatsSection";
+import PricingSection from "../components/pricing/PricingSection";
+import ContactSection from "../components/contact/ContactSection";
+import Footer from "../components/common/Footer";
 
 const Home = () => {
     return (

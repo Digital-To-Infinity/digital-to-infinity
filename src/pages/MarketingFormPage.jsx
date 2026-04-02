@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import MarketingPlanForm from '../components/MarketingPlanForm';
+import Navbar from '../components/common/Navbar';
+import Footer from '../components/common/Footer';
+import MarketingPlanForm from '../components/pricing/MarketingPlanForm';
 
 const MarketingFormPage = () => {
     useEffect(() => {

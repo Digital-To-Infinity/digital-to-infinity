@@ -1,6 +1,6 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import PerformanceAccPlans from "../components/PerformanceAccPlans";
+import Footer from "../components/common/Footer";
+import Navbar from "../components/common/Navbar";
+import PerformanceAccPlans from "../components/plans/PerformanceAccPlans";
 
 const PerformanceAcc = () => {
   return (

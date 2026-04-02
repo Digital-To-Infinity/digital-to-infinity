@@ -1,6 +1,6 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Plan from "../components/Plan";
+import Footer from "../components/common/Footer";
+import Navbar from "../components/common/Navbar";
+import Plan from "../components/plans/Plan";
 
 const Plans = () => {
     return (

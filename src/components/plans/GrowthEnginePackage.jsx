@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, ChevronDown, Target, Zap, TrendingUp, Users, MessageSquare, X, Sparkles } from "lucide-react";
 
 // Import images from assets
-import NaviMumbaiImg from "../assets/growth-engine-package/navi_mumbai.png";
-import TeamImg from "../assets/growth-engine-package/office-working.png";
-import FounderImg from "../assets/growth-engine-package/explaination.png";
-import InteriorImg from "../assets/growth-engine-package/interior-work.png";
-import ConsultationImg from "../assets/growth-engine-package/interior-work-explanation.png";
-import OfficeImg from "../assets/growth-engine-package/office.png";
-import ContactPopup from "./ContactPopup";
+import NaviMumbaiImg from "../../assets/growth-engine-package/navi_mumbai.png";
+import TeamImg from "../../assets/growth-engine-package/office-working.png";
+import FounderImg from "../../assets/growth-engine-package/explaination.png";
+import InteriorImg from "../../assets/growth-engine-package/interior-work.png";
+import ConsultationImg from "../../assets/growth-engine-package/interior-work-explanation.png";
+import OfficeImg from "../../assets/growth-engine-package/office.png";
+import ContactPopup from "../contact/ContactPopup";
 import ReactPixel from "react-facebook-pixel";
 
 const GrowthEnginePackage = () => {

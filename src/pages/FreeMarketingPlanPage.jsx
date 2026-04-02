@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import FreeMarketingPlan from '../components/FreeMarketingPlan';
+import Navbar from '../components/common/Navbar';
+import Footer from '../components/common/Footer';
+import FreeMarketingPlan from '../components/pricing/FreeMarketingPlan';
 
 const FreeMarketingPlanPage = () => {
     useEffect(() => {

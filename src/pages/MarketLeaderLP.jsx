@@ -1,6 +1,6 @@
-import Footer from "../components/Footer";
-import MarketLeaderPackage from "../components/MarketLeaderPackage";
-import Navbar from "../components/Navbar";
+import Footer from "../components/common/Footer";
+import MarketLeaderPackage from "../components/plans/MarketLeaderPackage";
+import Navbar from "../components/common/Navbar";
 
 const MarketLeaderLP = () => {
     return (

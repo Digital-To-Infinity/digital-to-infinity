@@ -1,8 +1,8 @@
 import { Rocket, Instagram, Facebook, Linkedin, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
-import { companyInfo } from '../data/mock';
+import { companyInfo } from '../../data/mock';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import footerLogo from "../assets/footer-logo.jpg";
+import footerLogo from "../../assets/footer-logo.jpg";
 
 const Footer = () => {
 

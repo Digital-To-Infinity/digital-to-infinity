@@ -2,14 +2,14 @@ import { useState, lazy, Suspense } from 'react';
 import ReactPixel from 'react-facebook-pixel';
 import { CheckCircle2, Rocket, Wallet, TrendingUp, Smile, Trophy, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Antigravity from '../components/Antigravity';
-import StatCard from '../components/StatCard';
-import FeatureCard from '../components/FeatureCard';
-import ServiceCard from '../components/ServiceCard';
-import { values, service } from '../data/mock';
+import Antigravity from '../common/Antigravity';
+import StatCard from '../home/StatCard';
+import FeatureCard from '../home/FeatureCard';
+import ServiceCard from '../services/ServiceCard';
+import { values, service } from '../../data/mock';
 
 // OPTIMIZATION: Lazy load the popup so it doesn't slow down initial page load
-const ContactPopup = lazy(() => import("../components/ContactPopup"));
+const ContactPopup = lazy(() => import("../contact/ContactPopup"));
 
 const containerVariants = {
     hidden: { opacity: 0 },

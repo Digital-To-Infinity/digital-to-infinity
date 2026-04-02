@@ -1,6 +1,6 @@
-import Footer from "../components/Footer";
-import GrowthEnginePlans from "../components/GrowthEnginePlans";
-import Navbar from "../components/Navbar";
+import Footer from "../components/common/Footer";
+import GrowthEnginePlans from "../components/plans/GrowthEnginePlans";
+import Navbar from "../components/common/Navbar";
 
 const GrowthEngine = () => {
     return (

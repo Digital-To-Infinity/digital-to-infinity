@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Handshake, Globe, Rocket, Target, Cpu, Briefcase, CalendarRange, Bot, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
-import ContactPopup from "../components/ContactPopup";
+import ContactPopup from "../contact/ContactPopup";
 
 // --- DATA ---
 const plans = [

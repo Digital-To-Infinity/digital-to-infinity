@@ -13,7 +13,7 @@ import PerformanceAcc from "./pages/PerformanceAcc";
 import MarketLeader from "./pages/MarketLeader";
 import AllPlansPage from "./pages/AllPlansPage";
 import Portfolio from "./pages/Portfolio";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/common/ScrollToTop";
 import NewYear from "./pages/NewYear";
 import StarterPackOffers from './pages/StarterPackOffers';
 import OnboardingForm from './pages/OnboardingForm';
@@ -23,7 +23,7 @@ import PerformanceAcceleratorLP from './pages/PerformanceAcceleratorLP';
 import MarketLeaderLP from './pages/MarketLeaderLP';
 import FreeMarketingPlanPage from './pages/FreeMarketingPlanPage';
 import MarketingFormPage from './pages/MarketingFormPage';
-import Audit from './pages/audit';
+import Audit from './pages/Audit';
 import SecondaryPlanPage from './pages/SecondaryPlanPage';
 
 

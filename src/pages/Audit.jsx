@@ -1,6 +1,6 @@
-import Audits from "../components/Audits";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Audits from "../components/services/Audits";
+import Footer from "../components/common/Footer";
+import Navbar from "../components/common/Navbar";
 
 const Audit = () => {
     return (

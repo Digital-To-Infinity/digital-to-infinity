@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Check, X, Star, Sparkles, Zap } from 'lucide-react';
-import { pricingPlans } from '../data/mock';
+import { pricingPlans } from '../../data/mock';
 import { Link } from 'react-router-dom';
 
 const PricingSection = () => {

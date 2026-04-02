@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import ContactPopup from "../components/ContactPopup";
-import Logo from "../assets/logo.png";
+import ContactPopup from "../contact/ContactPopup";
+import Logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

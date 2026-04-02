@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { motion, LayoutGroup } from 'framer-motion';
 import { Sparkles, ArrowRight, CheckCircle2, MonitorSmartphone, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../components/common/Navbar';
+import Footer from '../components/common/Footer';
 import PackageCard from '../components/pricing/PackageCard';
 import { websitePackages, creativesPackages, adsPackages, socialPackages } from '../data/packageData';
-import ContactPopup from '../components/ContactPopup';
+import ContactPopup from '../components/contact/ContactPopup';
 
 const SecondaryPlanPage = ({ category }) => {
 

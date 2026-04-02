@@ -1,6 +1,6 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Service from "../components/Service";
+import Footer from "../components/common/Footer";
+import Navbar from "../components/common/Navbar";
+import Service from "../components/services/Service";
 
 const Services = () => {
     return (

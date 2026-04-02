@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
     MapPin, Globe, Smartphone, Palette, MessageCircle,
     Megaphone, Grid, GraduationCap, FileText, Headphones,
     ArrowRight, Zap, Image, Layers, Tag, Loader2, Check
 } from 'lucide-react';
-import ContactPopup from "../components/ContactPopup";
-import { webProjects } from "../data/mock";
+import ContactPopup from "../contact/ContactPopup";
+import { webProjects } from "../../data/mock";
 import ReactGA from "react-ga4";
 import ReactPixel from "react-facebook-pixel";
 
@@ -40,6 +41,79 @@ const Reveal = ({ children, className = "" }) => {
 };
 
 /* --- COMPONENT: Colorful Fireworks --- */
+class Particle {
+    constructor(w, h) {
+        this.w = w;
+        this.h = h;
+        this.x = Math.random() * w;
+        this.y = h;
+        this.vx = Math.random() * 4 - 2;
+        this.vy = Math.random() * -12 - 5;
+        this.gravity = 0.2;
+        this.exploded = false;
+
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#00ffff', '#ff00ff', '#ff9900'];
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+
+        this.life = 100;
+        this.shards = [];
+    }
+
+    update() {
+        if (!this.exploded) {
+            this.x += this.vx;
+            this.y += this.vy;
+            this.vy += this.gravity;
+            if (this.vy >= -2) {
+                this.exploded = true;
+                this.createShards();
+            }
+        } else {
+            this.shards.forEach((s, i) => {
+                s.x += s.vx;
+                s.y += s.vy;
+                s.vy += 0.1;
+                s.alpha -= 0.02;
+                if (s.alpha <= 0) this.shards.splice(i, 1);
+            });
+            if (this.shards.length === 0) this.life = 0;
+        }
+    }
+
+    createShards() {
+        for (let i = 0; i < 50; i++) {
+            const speed = Math.random() * 4 + 2;
+            const angle = Math.random() * Math.PI * 2;
+            this.shards.push({
+                x: this.x,
+                y: this.y,
+                vx: Math.cos(angle) * speed,
+                vy: Math.sin(angle) * speed,
+                alpha: 1,
+                color: this.color
+            });
+        }
+    }
+
+    draw(ctx) {
+        if (!this.exploded) {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, 2.5, 0, Math.PI * 2);
+            ctx.fillStyle = "rgba(255,255,255,0.9)";
+            ctx.fill();
+        } else {
+            this.shards.forEach(s => {
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, 1.5, 0, Math.PI * 2);
+                ctx.fillStyle = s.color;
+                ctx.globalAlpha = s.alpha;
+                ctx.fill();
+                ctx.globalAlpha = 1;
+            });
+        }
+    }
+}
+
 const Fireworks = () => {
     const canvasRef = useRef(null);
 
@@ -57,86 +131,15 @@ const Fireworks = () => {
         };
         window.addEventListener('resize', resize);
 
-        class Particle {
-            constructor() {
-                this.x = Math.random() * w;
-                this.y = h;
-                this.vx = Math.random() * 4 - 2;
-                this.vy = Math.random() * -12 - 5;
-                this.gravity = 0.2;
-                this.exploded = false;
-
-                const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#00ffff', '#ff00ff', '#ff9900'];
-                this.color = colors[Math.floor(Math.random() * colors.length)];
-
-                this.life = 100;
-                this.shards = [];
-            }
-
-            update() {
-                if (!this.exploded) {
-                    this.x += this.vx;
-                    this.y += this.vy;
-                    this.vy += this.gravity;
-                    if (this.vy >= -2) {
-                        this.exploded = true;
-                        this.createShards();
-                    }
-                } else {
-                    this.shards.forEach((s, i) => {
-                        s.x += s.vx;
-                        s.y += s.vy;
-                        s.vy += 0.1;
-                        s.alpha -= 0.02;
-                        if (s.alpha <= 0) this.shards.splice(i, 1);
-                    });
-                    if (this.shards.length === 0) this.life = 0;
-                }
-            }
-
-            createShards() {
-                for (let i = 0; i < 50; i++) {
-                    const speed = Math.random() * 4 + 2;
-                    const angle = Math.random() * Math.PI * 2;
-                    this.shards.push({
-                        x: this.x,
-                        y: this.y,
-                        vx: Math.cos(angle) * speed,
-                        vy: Math.sin(angle) * speed,
-                        alpha: 1,
-                        color: this.color
-                    });
-                }
-            }
-
-            draw() {
-                if (!this.exploded) {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, 2.5, 0, Math.PI * 2);
-                    ctx.fillStyle = "rgba(255,255,255,0.9)";
-                    ctx.fill();
-                } else {
-                    this.shards.forEach(s => {
-                        ctx.beginPath();
-                        ctx.arc(s.x, s.y, 1.5, 0, Math.PI * 2);
-                        ctx.fillStyle = s.color;
-                        ctx.globalAlpha = s.alpha;
-                        ctx.fill();
-                        ctx.globalAlpha = 1;
-                    });
-                }
-            }
-        }
-
         const loop = () => {
             ctx.globalCompositeOperation = 'destination-out';
             ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
             ctx.fillRect(0, 0, w, h);
             ctx.globalCompositeOperation = 'source-over';
-            if (Math.random() < 0.05) particles.push(new Particle());
+            if (Math.random() < 0.05) particles.push(new Particle(w, h));
             for (let i = particles.length - 1; i >= 0; i--) {
                 particles[i].update();
-                particles[i].draw();
+                particles[i].draw(ctx);
                 if (particles[i].life === 0 || particles[i].y > h) {
                     particles.splice(i, 1);
                 }
@@ -164,17 +167,7 @@ const NewYearOffers = () => {
     const [touched, setTouched] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
-    const [isFormValid, setIsFormValid] = useState(false);
-
-    const hasStartedFilling = Object.values(formData).some(value => value.trim() !== '');
-
-    useEffect(() => {
-        const isValid =
-            formData.name.trim() !== '' &&
-            formData.phone.trim() !== '';
-
-        setIsFormValid(isValid);
-    }, [formData]);
+    const isFormValid = formData.name.trim() !== '' && formData.phone.trim() !== '';
 
     const handleBlur = (e) => {
         setTouched({ ...touched, [e.target.name]: true });
@@ -189,7 +182,7 @@ const NewYearOffers = () => {
         const baseClass = "w-full bg-black border rounded-lg px-4 py-3 focus:outline-none focus:bg-neutral-900 text-white transition-colors";
 
         // Show Red Border if Required + Empty + Interacted
-        if (isRequired && formData[fieldName].trim() === '' && (touched[fieldName] || hasStartedFilling)) {
+        if (isRequired && formData[fieldName].trim() === '' && touched[fieldName]) {
             return `${baseClass} border-red-500 placeholder-red-400/50`;
         }
         return `${baseClass} border-white/20 focus:border-white`;

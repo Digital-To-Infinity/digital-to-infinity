@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import { Phone, Mail, MapPin, Send, MessageCircle, User, Instagram, Facebook, Linkedin, Loader2, Check, Sparkles, ArrowRight, Building2, Tag, ChevronDown, Pen, CheckCircle2 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
-import { companyInfo } from '../data/mock';
+import { companyInfo } from '../../data/mock';
 import ReactGA from "react-ga4";
 import ReactPixel from "react-facebook-pixel";
 

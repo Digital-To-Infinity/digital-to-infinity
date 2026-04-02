@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { motion, LayoutGroup } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { PlanCard } from '../components/Plan';
+import Navbar from '../components/common/Navbar';
+import Footer from '../components/common/Footer';
+import { PlanCard } from '../components/plans/Plan';
 import { pricingData } from '../data/mock';
 
 const AllPlansPage = () => {

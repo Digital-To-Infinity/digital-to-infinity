@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useMemo, useRef } from 'react';
+import { useMemo, useRef, useState, useEffect } from 'react';
 import * as THREE from 'three';
 
 const AntigravityInner = ({
@@ -27,7 +27,9 @@ const AntigravityInner = ({
     const lastMouseMoveTime = useRef(0);
     const virtualMouse = useRef({ x: 0, y: 0 });
 
-    const particles = useMemo(() => {
+    const particles = useRef([]);
+
+    useEffect(() => {
         const temp = [];
         const width = viewport.width || 100;
         const height = viewport.height || 100;
@@ -65,7 +67,7 @@ const AntigravityInner = ({
                 randomRadiusOffset
             });
         }
-        return temp;
+        particles.current = temp;
     }, [count, viewport.width, viewport.height]);
 
     useFrame(state => {
@@ -99,7 +101,7 @@ const AntigravityInner = ({
 
         const globalRotation = state.clock.getElapsedTime() * rotationSpeed;
 
-        particles.forEach((particle, i) => {
+        particles.current.forEach((particle, i) => {
             let { t, speed, mx, my, mz, cz, randomRadiusOffset } = particle;
 
             t = particle.t += speed / 2;

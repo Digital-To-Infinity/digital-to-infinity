@@ -2,9 +2,9 @@ import { useState } from 'react';
 import ReactPixel from 'react-facebook-pixel';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ArrowUpRight, Instagram, Globe, Sparkles } from 'lucide-react';
-import ContactPopup from "../components/ContactPopup";
-import { webProjects } from "../data/mock";
-import { socialPortfolios } from "../data/mock";
+import ContactPopup from "../contact/ContactPopup";
+import { webProjects } from "../../data/mock";
+import { socialPortfolios } from "../../data/mock";
 
 // SOCIAL MEDIA COMPONENTS
 const InstagramGrid = ({ images }) => {

@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import { Check, Rocket, Star, Quote } from 'lucide-react';
-import Antigravity from '../components/Antigravity';
-import { servicesData, techStack, testimonials } from '../data/mock';
-import ContactPopup from "../components/ContactPopup";
+import Antigravity from '../common/Antigravity';
+import { servicesData, techStack, testimonials } from '../../data/mock';
+import ContactPopup from "../contact/ContactPopup";
 
 // --- COMPONENT: 3D SERVICE CARD ---
 const DetailedServiceCard = ({ icon: Icon, title, desc, features, index }) => {

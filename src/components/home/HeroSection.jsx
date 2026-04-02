@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { ArrowRight, Play, Sparkles, TrendingUp, Zap, Star } from 'lucide-react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'; 
-import { companyInfo, platforms } from '../data/mock';
+import { companyInfo, platforms } from '../../data/mock';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {

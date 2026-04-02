@@ -1,6 +1,6 @@
 import { Users, Search, Target, Monitor, Palette, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { services } from '../data/mock';
+import { services } from '../../data/mock';
 
 const iconMap = {
   Users,

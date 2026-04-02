@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { CheckCircle2, ArrowRight, Zap } from 'lucide-react';
-import { modules } from '../data/mock';
-import ContactPopup from "../components/ContactPopup";
+import { modules } from '../../data/mock';
+import ContactPopup from "../contact/ContactPopup";
 
 const StackedCard = ({ module, total }) => {
     const colorClasses = {

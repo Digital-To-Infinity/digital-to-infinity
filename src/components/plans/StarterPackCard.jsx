@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight } from 'lucide-react';
-import { starterFeatures } from "../data/mock";
-import ContactPopup from "../components/ContactPopup";
+import { starterFeatures } from "../../data/mock";
+import ContactPopup from "../contact/ContactPopup";
 import { useState } from 'react';
 
 const StarterPackCard = () => {
@@ -38,17 +38,17 @@ const StarterPackCard = () => {
                             <motion.div
                                 key={i}
                                 className="absolute w-1 h-1 bg-violet-400/30 rounded-full"
-                                initial={{ y: "100%", x: Math.random() * 100 + "%", opacity: 0 }}
+                                initial={{ y: "100%", x: ((i * 37) % 100) + "%", opacity: 0 }}
                                 animate={{
                                     y: "-100%",
                                     opacity: [0, 1, 0],
                                     scale: [0.5, 1.5, 0.5]
                                 }}
                                 transition={{
-                                    duration: Math.random() * 5 + 5,
+                                    duration: ((i * 7) % 5) + 5,
                                     repeat: Infinity,
                                     ease: "linear",
-                                    delay: Math.random() * 5
+                                    delay: (i * 0.5) % 5
                                 }}
                             />
                         ))}

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
-import { stats } from '../data/mock';
+import { stats } from '../../data/mock';
 
 // Optimized Counter Component
 const Counter = ({ value }) => {

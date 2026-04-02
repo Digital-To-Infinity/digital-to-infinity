@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ArrowRight, Loader2, Zap, Target, Award, Plus, ChevronDown, ShieldCheck, XCircle } from 'lucide-react';
-import ilnmLogo from '../assets/ilnm-logo.png';
+import ilnmLogo from '../../assets/ilnm-logo.png';
 import ReactPixel from 'react-facebook-pixel';
 
 const MarketLeaderPackage = () => {
