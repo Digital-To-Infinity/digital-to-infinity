@@ -1,4 +1,4 @@
-import ServiceCard from '../services/ServiceCard';
+import ServiceCard from './ServiceCard';
 import { service } from '../../data/mock';
 
 const AboutServices = () => {

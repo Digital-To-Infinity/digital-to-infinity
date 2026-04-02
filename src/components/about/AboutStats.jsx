@@ -1,5 +1,5 @@
 import { Wallet, TrendingUp, Smile, Trophy } from 'lucide-react';
-import StatCard from '../home/StatCard';
+import StatCard from './StatCard';
 
 const AboutStats = () => {
     return (

@@ -1,6 +1,6 @@
 import Footer from "../components/common/Footer";
 import Navbar from "../components/common/Navbar";
-import Portfolios from "../components/home/Portfolios";
+import Portfolios from "../components/portfolio/Portfolios";
 
 const Portfolio = () => {
     return (

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import FeatureCard from '../home/FeatureCard';
+import FeatureCard from './FeatureCard';
 import { values } from '../../data/mock';
 
 const AboutWhyChooseUs = () => {
