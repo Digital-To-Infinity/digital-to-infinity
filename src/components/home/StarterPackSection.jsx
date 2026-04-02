@@ -39,22 +39,22 @@ const StarterPackSection = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const TimeBlock = ({ value, label }) => (
-        <div className="flex flex-col items-center">
-            <div className="relative">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 flex items-center justify-center">
-                    <span className="text-2xl sm:text-3xl font-bold text-white font-mono">
-                        {String(value).padStart(2, '0')}
-                    </span>
-                </div>
-            </div>
-            <span className="text-white/60 text-xs sm:text-sm mt-2 uppercase tracking-wider">{label}</span>
-        </div>
-    );
+    // const TimeBlock = ({ value, label }) => (
+    //     <div className="flex flex-col items-center">
+    //         <div className="relative">
+    //             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 flex items-center justify-center">
+    //                 <span className="text-2xl sm:text-3xl font-bold text-white font-mono">
+    //                     {String(value).padStart(2, '0')}
+    //                 </span>
+    //             </div>
+    //         </div>
+    //         <span className="text-white/60 text-xs sm:text-sm mt-2 uppercase tracking-wider">{label}</span>
+    //     </div>
+    // );
 
     return (
         <>
-            <section className="py-20 max-[376px]:py-16 relative overflow-hidden bg-slate-900">
+            <section className="py-20 max-[426px]:py-12 relative overflow-hidden bg-slate-900">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-950" />
 
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] opacity-20" />

@@ -21,7 +21,6 @@ const Counter = ({ value }) => {
 
   useEffect(() => {
     // Sync the spring value to the text content directly
-    // This avoids React re-renders completely!
     return springValue.on("change", (latest) => {
       if (ref.current) {
         ref.current.textContent = Math.round(latest);
@@ -34,7 +33,7 @@ const Counter = ({ value }) => {
 
 const StatsSection = () => {
   return (
-    <section id="about" className="py-24 max-[426px]:py-16 relative overflow-hidden bg-slate-900">
+    <section id="about" className="py-24 max-[426px]:py-12 relative overflow-hidden bg-slate-900">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-violet-950 to-slate-900" />
 

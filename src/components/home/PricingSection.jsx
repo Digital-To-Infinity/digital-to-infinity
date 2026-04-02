@@ -35,7 +35,7 @@ const PricingSection = () => {
     }, []);
 
     return (
-        <section id="plans" className="py-24 max-[426px]:py-16 bg-gray-50 relative overflow-hidden" ref={sectionRef}>
+        <section id="plans" className="py-24 max-[426px]:py-12 bg-gray-50 relative overflow-hidden" ref={sectionRef}>
             {/* Background Decoration */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-br from-violet-100 to-indigo-100 rounded-full blur-3xl opacity-50 -translate-y-1/2" />
 
