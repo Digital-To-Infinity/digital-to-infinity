@@ -1,6 +1,7 @@
-import { Users, Search, Target, Monitor, Palette, MessageCircle, Video, BarChart3 } from 'lucide-react';
+import { Users, Search, Target, Monitor, Palette, MessageCircle, Video, BarChart3, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { services } from '../../data/mock';
+import { useNavigate } from 'react-router-dom';
 
 const iconMap = {
   Users,
@@ -14,6 +15,7 @@ const iconMap = {
 };
 
 const ServicesSection = () => {
+  const navigate = useNavigate();
   // Animation Variants for the Container (Grid)
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -103,12 +105,13 @@ const ServicesSection = () => {
               <motion.div
                 key={service.id}
                 variants={cardVariants}
-                className="service-card group relative p-8 max-[376px]:p-6 bg-white rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                className="service-card group relative p-8 max-[376px]:p-6 bg-white rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer flex flex-col"
+                onClick={() => navigate(`/services/${service.slug}`)}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                 {/* Content */}
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col h-full">
                   {/* Icon */}
                   <div className={`w-16 max-[376px]:w-12 h-16 max-[376px]:h-12 mb-6 rounded-2xl bg-gradient-to-br ${gradients[index]} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-500`}>
                     <IconComponent className="w-8 max-[376px]:w-6 h-8 max-[376px]:h-6 text-white" />
@@ -120,9 +123,22 @@ const ServicesSection = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 max-[321px]:text-sm group-hover:text-white/90 mb-6 transition-colors duration-500">
+                  <p className="text-gray-600 max-[321px]:text-sm group-hover:text-white/90 mb-6 transition-colors duration-500 flex-grow">
                     {service.description}
                   </p>
+
+                  {/* Action Link - Only takes space on hover (Desktop), normal on Mobile */}
+                  <div className="w-full transition-all duration-500 overflow-hidden flex items-center justify-between group/btn
+                                  mt-8 pt-4 border-t border-gray-100 max-h-[100px] opacity-100
+                                  md:mt-0 md:pt-0 md:border-transparent md:max-h-0 md:opacity-0
+                                  group-hover:md:mt-8 group-hover:md:pt-4 group-hover:md:border-gray-100 group-hover:md:max-h-[100px] group-hover:md:opacity-100">
+                    <span className="text-sm font-bold text-gray-900 group-hover:text-white md:translate-y-1 group-hover:translate-y-0 transition-all duration-500">
+                      Explore Service
+                    </span>
+                    <div className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 group-hover:bg-white/20 scale-90 group-hover:scale-100 transition-all duration-500">
+                      <ArrowRight className="w-5 h-5 text-gray-900 group-hover:text-white" />
+                    </div>
+                  </div>
                 </div>
 
                 {/* Corner Decoration */}

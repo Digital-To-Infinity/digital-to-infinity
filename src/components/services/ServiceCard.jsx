@@ -1,7 +1,9 @@
 import { motion, useSpring, useTransform, useMotionValue, useMotionTemplate } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const ServiceCard = ({ icon: Icon, title, desc, features, index }) => {
+const ServiceCard = ({ icon: Icon, title, desc, features, index, slug }) => {
+    const navigate = useNavigate();
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
@@ -20,6 +22,7 @@ const ServiceCard = ({ icon: Icon, title, desc, features, index }) => {
             transition={{ delay: index * 0.05, duration: 0.5 }}
             className="h-full cursor-pointer group"
             onMouseMove={handleMouseMove}
+            onClick={() => navigate(`/services/${slug}`)}
         >
             <div className="relative h-full rounded-[2.5rem] border border-slate-800 bg-slate-950 p-8 md:p-10 shadow-2xl transition-all duration-500 overflow-hidden flex flex-col hover:border-violet-500/50">
                 {/* Mobile-Friendly Background Interaction: Subtle Looping Glow */}
@@ -81,10 +84,9 @@ const ServiceCard = ({ icon: Icon, title, desc, features, index }) => {
                         ))}
                     </ul>
 
-                    {/* Footer - Always visible on Mobile, interactive on Hover */}
+                    {/* Footer  */}
                     <div className="pt-6 mt-2 relative border-t border-white/5 flex items-center justify-between group/btn">
-                        <div className="flex flex-col">
-                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-1">Interactive</span>
+                        <div className="flex">
                             <span className="text-sm font-bold text-slate-300 md:group-hover:text-violet-400 transition-colors">Explore Solution</span>
                         </div>
                         

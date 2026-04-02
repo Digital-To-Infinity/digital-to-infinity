@@ -1,6 +1,9 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-const ServiceCard = ({ icon: Icon, title, desc, index }) => {
+const ServiceCard = ({ icon: Icon, title, desc, index, slug }) => {
+    const navigate = useNavigate();
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
@@ -32,7 +35,8 @@ const ServiceCard = ({ icon: Icon, title, desc, index }) => {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.6 }}
             style={{ perspective: 1000 }}
-            className="h-full"
+            className="h-full cursor-pointer"
+            onClick={() => navigate(`/services/${slug}`)}
         >
             <motion.div
                 onMouseMove={handleMouseMove}
@@ -65,17 +69,27 @@ const ServiceCard = ({ icon: Icon, title, desc, index }) => {
                         {title}
                     </h3>
 
-                    <p className="text-[#DCDCDC] leading-relaxed text-sm font-medium transition-colors group-hover:text-violet-100/90">
+                    <p className="text-[#DCDCDC] leading-relaxed text-sm font-medium transition-colors group-hover:text-violet-100/90 flex-grow">
                         {desc}
                     </p>
 
-                    <div className="mt-auto pt-6 w-full">
-                        <div className="h-0.5 w-12 rounded-full bg-white/20 group-hover:w-1/2 group-hover:bg-gradient-to-r group-hover:from-violet-500 group-hover:to-transparent transition-all duration-500 ease-out" />
+                    {/* Footer - Only takes space on hover (Desktop), normal on Mobile */}
+                    <div className="w-full transition-all duration-500 overflow-hidden flex items-center justify-between group/btn
+                                    mt-8 pt-6 border-t border-white/5 max-h-[100px] opacity-100
+                                    md:mt-0 md:pt-0 md:border-transparent md:max-h-0 md:opacity-0
+                                    group-hover:md:mt-8 group-hover:md:pt-6 group-hover:md:border-white/5 group-hover:md:max-h-[100px] group-hover:md:opacity-100">
+                        <span className="text-sm font-bold text-slate-300 md:translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                            Explore Solution
+                        </span>
+                        <div className="h-10 w-10 flex items-center justify-center rounded-full bg-violet-600/20 border border-white/10 scale-90 group-hover:scale-100 shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-500">
+                            <ArrowRight className="w-5 h-5 text-white" />
+                        </div>
                     </div>
                 </div>
             </motion.div>
         </motion.div>
     );
 };
+
 
 export default ServiceCard;

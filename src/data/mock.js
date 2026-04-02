@@ -86,36 +86,42 @@ export const services = [
     {
         id: 1,
         title: "Social Media Marketing",
+        slug: "social-media-marketing",
         description: "Full setup & daily handling of Instagram, Facebook & more to grow followers and engagement.",
         icon: "Users"
     },
     {
         id: 2,
         title: "Search Engine Optimization",
+        slug: "search-engine-optimization",
         description: "Boost your website ranking with on-page, off-page & local SEO for better Google visibility.",
         icon: "Search"
     },
     {
         id: 3,
         title: "Content & Video Creation",
+        slug: "content-video-creation",
         description: "High-quality video production, cinematic reels, and professional photoshoots to make your brand stand out.",
         icon: "Video"
     },
     {
         id: 4,
         title: "Website & App Development",
+        slug: "website-app-development",
         description: "Responsive, fast, and brand-focused websites with seamless integrations.",
         icon: "Monitor"
     },
     {
         id: 5,
         title: "Branding & Creative Design",
+        slug: "branding-creative-design",
         description: "Logos, posts, reels, and marketing creatives that capture your brand identity.",
         icon: "Palette"
     },
     {
         id: 6,
         title: "Strategy & Analytics",
+        slug: "strategy-analytics",
         description: "Data-driven marketing strategies and detailed performance analytics to scale your business effectively.",
         icon: "BarChart3"
     }
@@ -222,48 +228,54 @@ export const values = [
 ];
 
 export const service = [
-    { icon: Megaphone, title: "Social Media Marketing", desc: "Build a powerful presence. We manage your socials to drive engagement and brand loyalty." },
-    { icon: Palette, title: "Branding & Creative Design", desc: "Unique brand identities and creative assets that make your business stand out from the crowd." },
-    { icon: Search, title: "Search Engine Optimization", desc: "Dominate search results and get discovered by customers actively looking for your services." },
-    { icon: Video, title: "Content & Video Creation", desc: "Cinematic reels and high-quality visuals that stop the scroll and tell your brand's story." },
-    { icon: Globe, title: "Website & App Development", desc: "Custom, high-speed websites designed to provide a seamless user experience and drive sales." },
-    { icon: BarChart3, title: "Strategy & Analytics", desc: "Data-driven insights and strategic planning to ensure your marketing efforts deliver maximum ROI." }
+    { icon: Megaphone, title: "Social Media Marketing", slug: "social-media-marketing", desc: "Build a powerful presence. We manage your socials to drive engagement and brand loyalty." },
+    { icon: Palette, title: "Branding & Creative Design", slug: "branding-creative-design", desc: "Unique brand identities and creative assets that make your business stand out from the crowd." },
+    { icon: Search, title: "Search Engine Optimization", slug: "search-engine-optimization", desc: "Dominate search results and get discovered by customers actively looking for your services." },
+    { icon: Video, title: "Content & Video Creation", slug: "content-video-creation", desc: "Cinematic reels and high-quality visuals that stop the scroll and tell your brand's story." },
+    { icon: Globe, title: "Website & App Development", slug: "website-app-development", desc: "Custom, high-speed websites designed to provide a seamless user experience and drive sales." },
+    { icon: BarChart3, title: "Strategy & Analytics", slug: "strategy-analytics", desc: "Data-driven insights and strategic planning to ensure your marketing efforts deliver maximum ROI." }
 ];
 
 export const servicesData = [
     {
         icon: Users,
         title: "Social Media Marketing",
+        slug: "social-media-marketing",
         desc: "Build a powerful presence and grow your followers with full setup and daily handling of Instagram, Facebook, and more.",
         features: ["Organic Social Media Management", "Paid Social Advertising Campaigns", "Online Community Engagement", "Influencer Marketing Strategy"]
     },
     {
         icon: Palette,
         title: "Branding & Creative Design",
+        slug: "branding-creative-design",
         desc: "Make your business stand out with unique brand identities, logos, reels, and marketing creatives that capture attention.",
         features: ["Logo Design & Brand Identity", "Social Media Creatives & Banners", "Marketing Collateral Design", "UI/UX (User Experience) Design"]
     },
     {
         icon: Search,
         title: "Search Engine Optimization",
+        slug: "search-engine-optimization",
         desc: "Dominate search results and get discovered by local customers with on-page, off-page, and GMB optimization.",
         features: ["All Page SEO", "Local SEO (Google Business Profile)", "Google Ads (PPC) Campaigns", "Technical Website Audits"]
     },
     {
         icon: Video,
         title: "Content & Video Creation",
+        slug: "content-video-creation",
         desc: "Cinematic reels, professional photoshoots, and high-quality video production that tell your brand's story effectively.",
         features: ["Content Strategy & Planning", "Blog & Article Writing", "Video Production (Reels & Shorts)", "Email Marketing & Newsletters"]
     },
     {
         icon: Globe,
         title: "Website & App Development",
+        slug: "website-app-development",
         desc: "Your digital storefront open 24/7. We build responsive, fast, and secure websites designed to convert visitors into leads.",
         features: ["Custom Website Development", "E-Commerce & Online Store Setup", "Landing Page Design & Optimization", "Website Maintenance & Support"]
     },
     {
         icon: BarChart3,
         title: "Strategy & Analytics",
+        slug: "strategy-analytics",
         desc: "Data-driven marketing strategies and detailed performance analytics to ensure your efforts deliver maximum ROI and growth.",
         features: ["Digital Marketing Strategy", "Competitor Analysis", "Performance Analytics & Reporting", "Conversion Rate Optimization (CRO)"]
     },

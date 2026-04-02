@@ -25,6 +25,8 @@ import FreeMarketingPlanPage from './pages/FreeMarketingPlanPage';
 import MarketingFormPage from './pages/MarketingFormPage';
 import Audit from './pages/Audit';
 import SecondaryPlanPage from './pages/SecondaryPlanPage';
+import ServiceDetail from './pages/ServiceDetail';
+
 
 
 ReactGA.initialize("G-H5N5VHRL0Q");
@@ -89,6 +91,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
+
           <Route path="/plans" element={<Plans />} />
           <Route path="/plans/all-plans" element={<AllPlansPage />} />
           <Route path="/plans/growth-engine-plans" element={<GrowthEngine />} />

@@ -24,6 +24,7 @@ const AboutServices = () => {
                             title={service.title}
                             desc={service.desc}
                             index={index}
+                            slug={service.slug}
                         />
                     ))}
                 </div>
