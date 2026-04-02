@@ -222,12 +222,12 @@ export const values = [
 ];
 
 export const service = [
-    { icon: Megaphone, title: "Social Media Marketing", desc: "Building communities, not just followers. We create engagement that turns into loyalty." },
-    { icon: TrendingUp, title: "Performance Ads", desc: "Meta & Google Ads that convert. We optimize for CPA, ROAS, and bottom-line growth." },
-    { icon: Search, title: "SEO & Visibility", desc: "Dominate search results. We help your brand get found by the people actively looking for it." },
-    { icon: PenTool, title: "Content Creation", desc: "Visuals that pop. Copy that sells. Reels that go viral. We tell your story beautifully." },
-    { icon: Globe, title: "Web Development", desc: "Blazing fast, high-converting websites designed to turn visitors into customers." },
-    { icon: Smartphone, title: "App Marketing", desc: "From install to retention, we scale mobile apps using data-driven user acquisition strategies." }
+    { icon: Megaphone, title: "Social Media Marketing", desc: "Build a powerful presence. We manage your socials to drive engagement and brand loyalty." },
+    { icon: Palette, title: "Branding & Creative Design", desc: "Unique brand identities and creative assets that make your business stand out from the crowd." },
+    { icon: Search, title: "Search Engine Optimization", desc: "Dominate search results and get discovered by customers actively looking for your services." },
+    { icon: Video, title: "Content & Video Creation", desc: "Cinematic reels and high-quality visuals that stop the scroll and tell your brand's story." },
+    { icon: Globe, title: "Website & App Development", desc: "Custom, high-speed websites designed to provide a seamless user experience and drive sales." },
+    { icon: BarChart3, title: "Strategy & Analytics", desc: "Data-driven insights and strategic planning to ensure your marketing efforts deliver maximum ROI." }
 ];
 
 export const servicesData = [
