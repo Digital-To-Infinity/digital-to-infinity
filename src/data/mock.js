@@ -85,7 +85,7 @@ export const stats = [
 export const services = [
     {
         id: 1,
-        title: "Social Media Management",
+        title: "Social Media Marketing",
         description: "Full setup & daily handling of Instagram, Facebook & more to grow followers and engagement.",
         icon: "Users"
     },
@@ -97,13 +97,13 @@ export const services = [
     },
     {
         id: 3,
-        title: "Paid Advertising",
-        description: "Targeted campaigns on Google, Facebook & Instagram to drive leads and sales.",
-        icon: "Target"
+        title: "Content & Video Creation",
+        description: "High-quality video production, cinematic reels, and professional photoshoots to make your brand stand out.",
+        icon: "Video"
     },
     {
         id: 4,
-        title: "Website Design & Development",
+        title: "Website & App Development",
         description: "Responsive, fast, and brand-focused websites with seamless integrations.",
         icon: "Monitor"
     },
@@ -115,9 +115,9 @@ export const services = [
     },
     {
         id: 6,
-        title: "WhatsApp & Email Marketing",
-        description: "Automated tools and campaigns to reach customers directly and build relationships.",
-        icon: "MessageCircle"
+        title: "Strategy & Analytics",
+        description: "Data-driven marketing strategies and detailed performance analytics to scale your business effectively.",
+        icon: "BarChart3"
     }
 ];
 
