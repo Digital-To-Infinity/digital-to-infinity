@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Sparkles, ArrowRight, Zap, CheckCircle2, Phone, MousePointer2 } from 'lucide-react';
+import { Sparkles, ArrowRight, Phone } from 'lucide-react';
 import { useRef } from 'react';
 
 const ServiceHero = ({ service, setContactOpen }) => {
@@ -46,7 +46,7 @@ const ServiceHero = ({ service, setContactOpen }) => {
                         Premium {service.title} Agency
                     </div>
 
-                    <h1 className="text-5xl md:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8">
+                    <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight mb-8">
                         Transform Your
                         <span className="relative inline-block mt-2">
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 animate-gradient bg-[length:200%_auto]">
@@ -58,7 +58,7 @@ const ServiceHero = ({ service, setContactOpen }) => {
                         </span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-slate-400 leading-relaxed mb-12 font-medium">
+                    <p className="text-lg md:text-lg text-slate-400 leading-relaxed mb-12 font-medium max-w-6xl">
                         {service.desc} We don't just provide a service; we build a <span className="text-white font-semibold">performance-focused growth engine</span> that propels your brand to the next level of digital excellence.
                     </p>
 

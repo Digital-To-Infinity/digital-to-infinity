@@ -66,8 +66,8 @@ const ServiceCard = ({ icon: Icon, title, desc, features, index, slug }) => {
                         </div>
                     </div>
                     
-                    <h3 className="mb-3 text-xl md:text-2xl font-bold text-white tracking-tight group-hover:text-violet-200 transition-colors uppercase md:normal-case">{title}</h3>
-                    <p className="text-slate-400 mb-6 md:mb-8 text-sm md:text-base leading-relaxed flex-grow">{desc}</p>
+                    <h3 className="mb-3 text-[23px] font-bold text-white tracking-tight group-hover:text-violet-200 transition-colors uppercase md:normal-case">{title}</h3>
+                    <p className="text-slate-400 mb-4 text-[15px] leading-relaxed flex-grow">{desc}</p>
                     
                     {/* Features List - Always readable on mobile */}
                     <ul className="space-y-3 md:space-y-4 mt-auto border-t border-white/5 pt-6 md:pt-8 pb-4">

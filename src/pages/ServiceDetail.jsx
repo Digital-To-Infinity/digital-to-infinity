@@ -6,6 +6,7 @@ import ContactPopup from '../components/contact/ContactPopup';
 import { servicesData } from '../data/mock';
 import ServiceHero from '../components/serviceDetail/ServiceHero';
 import ServiceFeatures from '../components/serviceDetail/ServiceFeatures';
+import ServiceStack from '../components/serviceDetail/ServiceStack';
 import ServiceBenefits from '../components/serviceDetail/ServiceBenefits';
 import ServiceCTA from '../components/serviceDetail/ServiceCTA';
 
@@ -35,9 +36,14 @@ const ServiceDetail = () => {
                 setContactOpen={setContactOpen} 
             />
 
-            <ServiceFeatures 
+            <ServiceStack 
                 service={service} 
+                setContactOpen={setContactOpen} 
             />
+
+            {/* <ServiceFeatures 
+                service={service} 
+            /> */}
 
             <ServiceBenefits />
 

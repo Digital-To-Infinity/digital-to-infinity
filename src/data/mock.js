@@ -56,9 +56,10 @@ import ss9 from "../assets/shaktisteel/ss9.jpeg";
 
 import {
     Target, Zap, BarChart3, Megaphone, Search, TrendingUp, PenTool,
-    Globe, Smartphone, MessageCircle, MapPin, GraduationCap, LineChart,
-    Layers, Layout, Database, Palette, Blocks, FileText, Headphones,
-    Sparkles, Crown, Filter, Video, Users, Bot, Camera, ShieldCheck, Rocket
+    Globe, Smartphone, MessageCircle, MapPin, GraduationCap, Layers,
+    Layout, Database, Palette, Blocks, FileText, Headphones, Sparkles,
+    Crown, Filter, Video, Users, Bot, Camera, Monitor, Mail, Code,
+    ShoppingBag, Settings, MessageSquare
 }
     from 'lucide-react';
 
@@ -651,3 +652,126 @@ export const socialPortfolios = [
         images: [ss1, ss2, ss3, ss4, ss5, ss6, ss7, ss8, ss9]
     }
 ];
+
+export const subServiceData = {
+    "Organic Social Media Management": {
+        icon: Users,
+        desc: "Boost your brand's presence with authentic, engaging content tailored for your audience across all platforms.",
+        points: ["Content Scheduling", "Engagement Audit", "Growth Strategy"]
+    },
+    "Paid Social Advertising Campaigns": {
+        icon: Target,
+        desc: "Reach your ideal customers with precision-targeted ad campaigns designed to maximize ROI and drive conversions.",
+        points: ["Ad Targeting", "Budget Mgmt", "Performance Tracking"]
+    },
+    "Online Community Engagement": {
+        icon: MessageSquare,
+        desc: "Cultivate a loyal brand following by fostering meaningful conversations and building a strong community around your brand.",
+        points: ["Comment Moderation", "Group Mgmt", "Advocacy Programs"]
+    },
+    "Influencer Marketing Strategy": {
+        icon: Camera,
+        desc: "Partner with relevant influencers to expand your reach, build trust, and gain credibility within your target niche.",
+        points: ["Influencer Sourcing", "Collaboration Planning", "ROI Analysis"]
+    },
+    "Logo Design & Brand Identity": {
+        icon: Palette,
+        desc: "Create a memorable visual identity that resonates with your values and stands out in the marketplace.",
+        points: ["Typography & Colors", "Brand Manuals", "Visual Language"]
+    },
+    "Social Media Creatives & Banners": {
+        icon: Layout,
+        desc: "Stunning graphics and layouts designed to stop the scroll and communicate your brand story effectively.",
+        points: ["Platform Optimization", "High-Impact Visuals", "Brand Consistency"]
+    },
+    "Marketing Collateral Design": {
+        icon: FileText,
+        desc: "Professional brochures, business cards, and marketing materials that leave a lasting impression on your clients.",
+        points: ["Print-Ready Designs", "Digital Brochures", "Brand Stationery"]
+    },
+    "UI/UX (User Experience) Design": {
+        icon: Monitor,
+        desc: "Seamless, intuitive interfaces designed to enhance user satisfaction and drive higher conversion rates.",
+        points: ["User Flow Mapping", "Wireframing", "Prototyping"]
+    },
+    "All Page SEO": {
+        icon: Search,
+        desc: "Optimize every page of your website to rank higher on search engines and attract organic, high-quality traffic.",
+        points: ["Keyword Optimization", "Meta Descriptions", "On-Page Audits"]
+    },
+    "Local SEO (Google Business Profile)": {
+        icon: MapPin,
+        desc: "Dominate local search results and get discovered by local customers in your immediate area.",
+        points: ["GMB Optimization", "Local Citations", "Review Management"]
+    },
+    "Google Ads (PPC) Campaigns": {
+        icon: Megaphone,
+        desc: "Drive instant, qualified traffic to your website with precision-targeted Google Search and Display ads.",
+        points: ["Keyword Bidding", "Ad Copywriting", "Landing Page Audit"]
+    },
+    "Technical Website Audits": {
+        icon: BarChart3,
+        desc: "Deep-dive technical analysis to identify and fix issues that could be holding back your search performance.",
+        points: ["Site Speed Fixes", "Crawl Error Resolution", "Schema Markup"]
+    },
+    "Content Strategy & Planning": {
+        icon: PenTool,
+        desc: "A strategic roadmap for your content that aligns with your brand goals and speaks directly to your audience's needs.",
+        points: ["Content Calendar", "Audience Personas", "Editorial Standards"]
+    },
+    "Blog & Article Writing": {
+        icon: FileText,
+        desc: "Thoroughly researched, SEO-optimized blog posts and articles that establish your brand as a leading industry authority.",
+        points: ["In-Depth Research", "SEO Optimization", "Readable Formatting"]
+    },
+    "Video Production (Reels & Shorts)": {
+        icon: Video,
+        desc: "High-quality, viral-ready video content designed to thrive on modern social platforms like Instagram and TikTok.",
+        points: ["Scriptwriting", "Pro-Editing", "Platform Formatting"]
+    },
+    "Email Marketing & Newsletters": {
+        icon: Mail,
+        desc: "Personalized, automated email campaigns that nurture leads and keep your brand top-of-mind for your customers.",
+        points: ["Email Automation", "List Segmentation", "Performance Reporting"]
+    },
+    "Custom Website Development": {
+        icon: Code,
+        desc: "High-performance, bespoke websites built with the latest technologies to provide a unique and powerful digital presence.",
+        points: ["Responsive Design", "Custom CMS", "Security Hardening"]
+    },
+    "E-Commerce & Online Store Setup": {
+        icon: ShoppingBag,
+        desc: "End-to-end e-commerce solutions that make it easy for your customers to browse, buy, and interact with your products.",
+        points: ["Payment Integration", "Inventory Mgmt", "UX Optimization"]
+    },
+    "Landing Page Design & Optimization": {
+        icon: Layout,
+        desc: "High-conversion landing pages designed with a single focus: turning clicks into qualified leads or sales.",
+        points: ["Conversion Focus", "A/B Testing Support", "Clear Call-to-Actions"]
+    },
+    "Website Maintenance & Support": {
+        icon: Settings,
+        desc: "Ongoing support and technical maintenance to ensure your website remains fast, secure, and always up-to-date.",
+        points: ["Daily Backups", "Security Patches", "Performance Tuning"]
+    },
+    "Digital Marketing Strategy": {
+        icon: TrendingUp,
+        desc: "A comprehensive digital growth roadmap designed to maximize your brand's reach and impact across all channels.",
+        points: ["Omnichannel Planning", "Growth Hacking", "Channel Selection"]
+    },
+    "Competitor Analysis": {
+        icon: Globe,
+        desc: "In-depth research into your competition's digital activities to identify opportunities for your brand to out-perform them.",
+        points: ["Market Benchmarking", "SEO Analysis", "Ad Strategy Research"]
+    },
+    "Performance Analytics & Reporting": {
+        icon: BarChart3,
+        desc: "Crystal-clear reporting and data-driven insights to help you understand exactly where your marketing budget is working.",
+        points: ["ROI Analysis", "Custom Dashboards", "Monthly Deep-Dives"]
+    },
+    "Conversion Rate Optimization (CRO)": {
+        icon: Zap,
+        desc: "Continuous scientific testing and optimization of your digital assets to squeeze every drop of value from your traffic.",
+        points: ["User Behavior Tools", "Heatmap Analysis", "Funnel Tuning"]
+    }
+};
