@@ -231,27 +231,47 @@ export const service = [
 ];
 
 export const servicesData = [
-    { icon: Smartphone, title: "Social Media Setup", desc: "If your profiles aren't professional, people assume your business isn't serious. We make you look trustworthy.", features: ["Branded Insta & FB Pages", "Optimized Bio & Cover", "Link Integration", "Professional Look"] },
-    { icon: MessageCircle, title: "WhatsApp Marketing Tool", desc: "Don't miss customers. WhatsApp is where business conversations happen fastest.", features: ["Auto Greeting Messages", "Bulk Messaging System", "Product Catalog Setup", "Broadcast Lists"] },
-    { icon: MapPin, title: "Google Business Profile", desc: "Your customers are searching 'near me'. If you aren't listed, you are invisible.", features: ["Profile Creation", "Verification Support", "Local SEO Ranking", "Map Integration"] },
-    { icon: Globe, title: "Responsive Website", desc: "Your digital storefront open 24/7. Customers expect a proper website to trust you.", features: ["Mobile-Friendly Design", "1 Year Free Hosting", "Enquiry Forms", "WhatsApp Integration"] },
-    { icon: Megaphone, title: "Ad Campaigns", desc: "Organic reach is slow. Ads help you reach thousands of people in your area instantly.", features: ["3-5 Ad Campaigns", "Precise Targeting", "Conversion Creative", "Performance Monitoring"] },
-    { icon: GraduationCap, title: "Training & Handover", desc: "Tools are useless if you don't know how to use them. We ensure you stay in control.", features: ["1-2 Hour Online Session", "Step-by-step Handover", "Do's and Don'ts", "Avoid Costly Mistakes"] },
-    { icon: LineChart, title: "Growth Strategy", desc: "Posting randomly won't bring results. You need ideas that actually work in your industry.", features: ["5-10 Viral Ideas", "Competitor Analysis", "30-Day Direction", "Engagement Tactics"] },
-    { icon: PenTool, title: "Brand Asset Pack", desc: "Your brand is judged in seconds. A sloppy logo costs you trust. We give you a pro look.", features: ["Professional Logo", "9 Social Media Posts", "Website Banners", "Design Templates"] }
+    {
+        icon: Users,
+        title: "Social Media Marketing",
+        desc: "Build a powerful presence and grow your followers with full setup and daily handling of Instagram, Facebook, and more.",
+        features: ["Organic Social Media Management", "Paid Social Advertising Campaigns", "Online Community Engagement", "Influencer Marketing Strategy"]
+    },
+    {
+        icon: Palette,
+        title: "Branding & Creative Design",
+        desc: "Make your business stand out with unique brand identities, logos, reels, and marketing creatives that capture attention.",
+        features: ["Logo Design & Brand Identity", "Social Media Creatives & Banners", "Marketing Collateral Design", "UI/UX (User Experience) Design"]
+    },
+    {
+        icon: Search,
+        title: "Search Engine Optimization",
+        desc: "Dominate search results and get discovered by local customers with on-page, off-page, and GMB optimization.",
+        features: ["All Page SEO", "Local SEO (Google Business Profile)", "Google Ads (PPC) Campaigns", "Technical Website Audits"]
+    },
+    {
+        icon: Video,
+        title: "Content & Video Creation",
+        desc: "Cinematic reels, professional photoshoots, and high-quality video production that tell your brand's story effectively.",
+        features: ["Content Strategy & Planning", "Blog & Article Writing", "Video Production (Reels & Shorts)", "Email Marketing & Newsletters"]
+    },
+    {
+        icon: Globe,
+        title: "Website & App Development",
+        desc: "Your digital storefront open 24/7. We build responsive, fast, and secure websites designed to convert visitors into leads.",
+        features: ["Custom Website Development", "E-Commerce & Online Store Setup", "Landing Page Design & Optimization", "Website Maintenance & Support"]
+    },
+    {
+        icon: BarChart3,
+        title: "Strategy & Analytics",
+        desc: "Data-driven marketing strategies and detailed performance analytics to ensure your efforts deliver maximum ROI and growth.",
+        features: ["Digital Marketing Strategy", "Competitor Analysis", "Performance Analytics & Reporting", "Conversion Rate Optimization (CRO)"]
+    },
 ];
 
 export const techStack = [
     { name: "Meta Ads", icon: Layers }, { name: "Google", icon: Search }, { name: "WhatsApp", icon: MessageCircle }, { name: "Instagram", icon: Smartphone },
     { name: "WordPress", icon: Globe }, { name: "Canva", icon: Layout }, { name: "Analytics", icon: BarChart3 }, { name: "Hosting", icon: Database },
-];
-
-export const testimonials = [
-    { name: "Tina Oliver", role: "Influencer", text: "I have been working with these guys for years now! With lots of hard work and timely communication, they made sure they delivered the best to me. Highly recommended!" },
-    { name: "Emily Watson", role: "Designer", text: "The team understood my brand vision perfectly. The new website has increased my inquiries by 300%. Truly professional service." },
-    { name: "George Weah", role: "Model", text: "Digital Infinity transformed my social media presence. The viral content strategy they created actually works!" },
-    { name: "Jennifer Dunn", role: "Dance Teacher", text: "The WhatsApp automation tool is a game changer. I no longer miss student inquiries while I'm teaching classes." },
-    { name: "Emma Tan", role: "Engineer", text: "Professional, fast, and results-driven. The ad campaigns brought in quality leads from day one." }
 ];
 
 "Google Business Profile Setup",
@@ -560,7 +580,7 @@ export const webProjects = [
         website: "https://lemonchiffon-lapwing-667047.hostingersite.com/",
         description: "City Homes is a leading real estate agency in Navi Mumbai, offering a wide range of residential and commercial properties for sale and rent."
     },
-     {
+    {
         id: 15,
         title: "Cognition School",
         image: cognitionschoolImg,
