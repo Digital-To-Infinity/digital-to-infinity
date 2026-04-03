@@ -10,6 +10,7 @@ import ServiceBenefits from '../components/serviceDetail/ServiceBenefits';
 import ServiceCTA from '../components/serviceDetail/ServiceCTA';
 import SocialMediaTeam from '../components/serviceDetail/SocialMediaTeam';
 import SocialMediaStrategy from '../components/serviceDetail/SocialMediaStrategy';
+import BrandingShowcase from '../components/serviceDetail/BrandingShowcase';
 
 const ServiceDetail = () => {
     const { slug } = useParams();
@@ -47,6 +48,10 @@ const ServiceDetail = () => {
                     <SocialMediaStrategy />
                     <SocialMediaTeam setContactOpen={setContactOpen} />
                 </>
+            )}
+
+            {service.slug === 'branding-creative-design' && (
+                <BrandingShowcase setContactOpen={setContactOpen} />
             )}
 
             <ServiceBenefits />
