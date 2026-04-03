@@ -16,6 +16,9 @@ import SEOTools from '../components/serviceDetail/SEOTools';
 import AIOSection from '../components/serviceDetail/AIOSection';
 import ContentCreationTools from '../components/serviceDetail/ContentCreationTools';
 import ContentCreationProcess from '../components/serviceDetail/ContentCreationProcess';
+import DevelopmentApproach from '../components/serviceDetail/DevelopmentApproach';
+import WebWhyChoose from '../components/serviceDetail/WebWhyChoose';
+
 
 const ServiceDetail = () => {
     const { slug } = useParams();
@@ -73,6 +76,13 @@ const ServiceDetail = () => {
                 <>
                     <ContentCreationTools />
                     <ContentCreationProcess setContactOpen={setContactOpen} />
+                </>
+            )}
+
+            {service.slug === 'website-app-development' && (
+                <>
+                    <DevelopmentApproach setContactOpen={setContactOpen} />
+                    <WebWhyChoose setContactOpen={setContactOpen} />
                 </>
             )}
 
