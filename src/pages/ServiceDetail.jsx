@@ -18,6 +18,8 @@ import ContentCreationTools from '../components/serviceDetail/ContentCreationToo
 import ContentCreationProcess from '../components/serviceDetail/ContentCreationProcess';
 import DevelopmentApproach from '../components/serviceDetail/DevelopmentApproach';
 import WebWhyChoose from '../components/serviceDetail/WebWhyChoose';
+import StrategyAnalytics from '../components/serviceDetail/StrategyAnalytics';
+import AnalyticsAudit from '../components/serviceDetail/AnalyticsAudit';
 
 
 const ServiceDetail = () => {
@@ -83,6 +85,13 @@ const ServiceDetail = () => {
                 <>
                     <DevelopmentApproach setContactOpen={setContactOpen} />
                     <WebWhyChoose setContactOpen={setContactOpen} />
+                </>
+            )}
+
+            {service.slug === 'strategy-analytics' && (
+                <>
+                    <StrategyAnalytics />
+                    <AnalyticsAudit />
                 </>
             )}
 

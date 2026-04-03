@@ -47,7 +47,7 @@ const ServiceHero = ({ service, setContactOpen }) => {
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight mb-8">
-                        Transform Your
+                        Transform Your <br />
                         <span className="relative inline-block mt-2">
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 animate-gradient bg-[length:200%_auto]">
                                 {service.title}
