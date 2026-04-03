@@ -9,6 +9,7 @@ import ServiceStack from '../components/serviceDetail/ServiceStack';
 import ServiceBenefits from '../components/serviceDetail/ServiceBenefits';
 import ServiceCTA from '../components/serviceDetail/ServiceCTA';
 import SocialMediaTeam from '../components/serviceDetail/SocialMediaTeam';
+import SocialMediaStrategy from '../components/serviceDetail/SocialMediaStrategy';
 
 const ServiceDetail = () => {
     const { slug } = useParams();
@@ -42,7 +43,10 @@ const ServiceDetail = () => {
             />
 
             {service.slug === 'social-media-marketing' && (
-                <SocialMediaTeam setContactOpen={setContactOpen} />
+                <>
+                    <SocialMediaStrategy />
+                    <SocialMediaTeam setContactOpen={setContactOpen} />
+                </>
             )}
 
             <ServiceBenefits />
