@@ -14,6 +14,7 @@ import BrandingShowcase from '../components/serviceDetail/BrandingShowcase';
 import BrandingProcess from '../components/serviceDetail/BrandingProcess';
 import SEOTools from '../components/serviceDetail/SEOTools';
 import AIOSection from '../components/serviceDetail/AIOSection';
+import ContentCreationTools from '../components/serviceDetail/ContentCreationTools';
 
 const ServiceDetail = () => {
     const { slug } = useParams();
@@ -65,6 +66,10 @@ const ServiceDetail = () => {
                     <SEOTools />
                     <AIOSection setContactOpen={setContactOpen} />
                 </>
+            )}
+
+            {service.slug === 'content-video-creation' && (
+                <ContentCreationTools />
             )}
 
             <ServiceBenefits />
