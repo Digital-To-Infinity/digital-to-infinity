@@ -13,6 +13,7 @@ import SocialMediaStrategy from '../components/serviceDetail/SocialMediaStrategy
 import BrandingShowcase from '../components/serviceDetail/BrandingShowcase';
 import BrandingProcess from '../components/serviceDetail/BrandingProcess';
 import SEOTools from '../components/serviceDetail/SEOTools';
+import AIOSection from '../components/serviceDetail/AIOSection';
 
 const ServiceDetail = () => {
     const { slug } = useParams();
@@ -60,7 +61,10 @@ const ServiceDetail = () => {
             )}
             
             {service.slug === 'search-engine-optimization' && (
-                <SEOTools />
+                <>
+                    <SEOTools />
+                    <AIOSection setContactOpen={setContactOpen} />
+                </>
             )}
 
             <ServiceBenefits />

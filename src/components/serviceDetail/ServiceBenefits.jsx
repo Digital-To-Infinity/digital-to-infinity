@@ -27,7 +27,7 @@ const ServiceBenefits = () => {
     ];
 
     return (
-        <section className="relative py-24 bg-slate-950 overflow-hidden">
+        <section className="relative py-16 bg-slate-950 overflow-hidden">
             {/* Background Decorative Pulses */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                 <div className="absolute -top-24 -right-24 w-96 h-96 bg-violet-600/10 rounded-full blur-[100px] animate-pulse" />
