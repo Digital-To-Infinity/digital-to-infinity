@@ -1,5 +1,5 @@
-import { motion, useSpring, useTransform, useMotionValue, useMotionTemplate } from 'framer-motion';
-import { Check, ArrowRight } from 'lucide-react';
+import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const ServiceCard = ({ icon: Icon, title, desc, features, index, slug }) => {
@@ -24,11 +24,11 @@ const ServiceCard = ({ icon: Icon, title, desc, features, index, slug }) => {
             onMouseMove={handleMouseMove}
             onClick={() => navigate(`/services/${slug}`)}
         >
-            <div className="relative h-full rounded-[2.5rem] border border-slate-800 bg-slate-950 p-8 md:p-10 shadow-2xl transition-all duration-500 overflow-hidden flex flex-col hover:border-violet-500/50">
+            <div className="relative h-full rounded-[2.5rem] border border-slate-800 bg-slate-950 p-8 md:p-10 max-[376px]:p-6 shadow-2xl transition-all duration-500 overflow-hidden flex flex-col hover:border-violet-500/50">
                 {/* Mobile-Friendly Background Interaction: Subtle Looping Glow */}
                 <div className="absolute inset-0 z-0 block md:hidden">
                     <motion.div
-                        animate={{ 
+                        animate={{
                             opacity: [0.05, 0.15, 0.05],
                             scale: [1, 1.2, 1],
                             x: ['-10%', '10%', '-10%'],
@@ -65,20 +65,20 @@ const ServiceCard = ({ icon: Icon, title, desc, features, index, slug }) => {
                             <Icon className="h-7 w-7 md:h-8 md:w-8 text-violet-400 group-hover:text-white transition-colors rotate-0 group-hover:rotate-12 duration-500" />
                         </div>
                     </div>
-                    
-                    <h3 className="mb-3 text-[23px] font-bold text-white tracking-tight group-hover:text-violet-200 transition-colors uppercase md:normal-case">{title}</h3>
-                    <p className="text-slate-400 mb-4 text-[15px] leading-relaxed flex-grow">{desc}</p>
-                    
+
+                    <h3 className="mb-3 text-[23px] max-[426px]:text-[20px] max-[376px]:text-[18px] max-[321px]:text-[16px] font-bold text-white tracking-tight group-hover:text-violet-200 transition-colors uppercase md:normal-case">{title}</h3>
+                    <p className="text-slate-400 mb-4 text-[15px] max-[376px]:text-[14px] max-[321px]:text-[13px] leading-relaxed flex-grow">{desc}</p>
+
                     {/* Features List - Always readable on mobile */}
                     <ul className="space-y-3 md:space-y-4 mt-auto border-t border-white/5 pt-6 md:pt-8 pb-4">
                         {features.map((item, i) => (
-                            <motion.li 
-                                key={i} 
+                            <motion.li
+                                key={i}
                                 initial={{ opacity: 0.8 }}
                                 whileHover={{ opacity: 1, x: 5 }}
-                                className="flex items-start gap-3 text-sm text-slate-400 md:hover:text-white transition-all duration-300"
+                                className="flex items-start gap-3 text-sm max-[376px]:text-[14px] max-[321px]:text-[13px] text-slate-400 md:hover:text-white transition-all duration-300"
                             >
-                                <div className="mt-1.5 flex-shrink-0 h-1 w-3 md:w-3 md:group-hover:w-4 rounded-full bg-slate-700 md:group-hover:bg-violet-500 transition-all duration-300 shadow-[0_0_10px_rgba(139,92,246,0.5)]" />
+                                <div className="mt-1.5 flex-shrink-0 h-1 w-3 md:w-3 md:group-hover:w-4 rounded-full bg-slate-700 md:group-hover:bg-violet-500 transition-all duration-300" />
                                 {item}
                             </motion.li>
                         ))}
@@ -89,7 +89,7 @@ const ServiceCard = ({ icon: Icon, title, desc, features, index, slug }) => {
                         <div className="flex">
                             <span className="text-sm font-bold text-slate-300 md:group-hover:text-violet-400 transition-colors">Explore Solution</span>
                         </div>
-                        
+
                         <div className="relative">
                             {/* Spinning Orbit Effect on Hover (Hidden on mobile or subtle) */}
                             <div className="absolute inset-0 rounded-full border border-violet-500/20 md:border-violet-500/0 md:group-hover:border-violet-500/50 md:group-hover:animate-[spin_3s_linear_infinite] scale-150 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700" />
