@@ -1,4 +1,4 @@
-import { Rocket, Instagram, Facebook, Linkedin, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
+import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 import { companyInfo } from '../../data/mock';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -32,7 +32,8 @@ const Footer = () => {
       { name: 'Market Leader', href: '/plans/market-leader-plans' },
     ],
     company: [
-      { name: 'About Us', href: '/about' },
+      { name: 'About', href: '/about' },
+      { name: 'Blogs', href: '/blogs' },
       { name: 'Portfolio', href: '/portfolio' },
       { name: 'Services', href: '/services' },
       { name: 'Plans', href: '/plans' },

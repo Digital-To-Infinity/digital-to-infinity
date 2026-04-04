@@ -26,6 +26,7 @@ import MarketingFormPage from './pages/MarketingFormPage';
 import Audit from './pages/Audit';
 import SecondaryPlanPage from './pages/SecondaryPlanPage';
 import ServiceDetail from './pages/ServiceDetail';
+import Blogs from './pages/Blogs';
 
 
 
@@ -89,6 +90,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+           <Route path="/blogs" element={<Blogs />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
