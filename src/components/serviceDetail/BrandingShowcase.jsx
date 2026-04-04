@@ -3,7 +3,7 @@ import { ArrowUpRight, CheckCircle2, Paintbrush, Sparkles } from 'lucide-react';
 
 const BrandingShowcase = ({ setContactOpen }) => {
     return (
-        <section className="py-16 bg-slate-950 overflow-hidden relative">
+        <section className="py-16 max-[426px]:py-12 bg-slate-950 overflow-hidden relative">
             {/* Background Glows */}
             <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2 pointer-events-none" />
@@ -18,7 +18,7 @@ const BrandingShowcase = ({ setContactOpen }) => {
                         transition={{ duration: 0.8 }}
                         className="flex flex-col justify-center"
                     >                        
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight mb-10">
+                        <h2 className="text-7xl max-[769px]:text-7xl max-[426px]:text-[46px] font-black text-white leading-[1.05] tracking-tight mb-10">
                             Why Choose <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400">Digital To Infinity</span> <br />
                             for Branding?

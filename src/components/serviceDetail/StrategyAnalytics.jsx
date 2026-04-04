@@ -66,7 +66,7 @@ const StrategyAnalytics = () => {
     ];
 
     return (
-        <section className="relative py-16 bg-slate-950 overflow-hidden">
+        <section className="relative py-16 max-[426px]:py-12 bg-slate-950 overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[140px] animate-pulse" />
@@ -85,14 +85,14 @@ const StrategyAnalytics = () => {
                     transition={{ duration: 0.8 }}
                     className="flex flex-col items-center text-center mb-24"
                 >
-                    <h2 className="text-4xl md:text-6xl font-black text-white leading-[1.1] mb-8">
+                    <h2 className="text-6xl max-[769px]:text-[72px] max-[426px]:text-[42px] font-black text-white leading-[1.1] mb-8">
                         Data-First {" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400">
                             Strategy Deployment.
                         </span>
                     </h2>
 
-                    <p className="text-xl text-slate-400 leading-relaxed max-w-6xl mx-auto">
+                    <p className="text-xl max-[426px]:text-lg text-slate-400 leading-relaxed max-w-6xl mx-auto">
                         In the age of information, data is the new oil. We don't just provide reports; we provide <span className="text-white font-semibold italic">actionable intelligence</span>.
                         Our Strategy & Analytics vertical is designed to eliminate guesswork and replace it with predictable, data-backed growth.
                     </p>

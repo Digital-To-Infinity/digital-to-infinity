@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import { 
-    Palette, Monitor, Blocks, Rocket, CheckCircle2, ArrowRight
-} from 'lucide-react';
+import {  Palette, Monitor, Blocks, Rocket, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const DevelopmentApproach = ({ setContactOpen }) => {
     const steps = [
@@ -40,7 +38,7 @@ const DevelopmentApproach = ({ setContactOpen }) => {
     ];
 
     return (
-        <section className="py-16 bg-slate-950 relative overflow-hidden">
+        <section className="py-16 max-[426px]:py-12 bg-slate-950 relative overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-blue-500/10 to-transparent -z-10 blur-[120px]" />
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-violet-500/10 to-transparent -z-10 blur-[120px]" />
@@ -52,7 +50,7 @@ const DevelopmentApproach = ({ setContactOpen }) => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight"
+                        className="text-6xl max-[769px]:text-[58px] max-[426px]:text-[42px] font-bold text-white mb-6 tracking-tight"
                     >
                         Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">Development Approach</span>
                     </motion.h2>
@@ -62,7 +60,7 @@ const DevelopmentApproach = ({ setContactOpen }) => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-lg text-slate-400 leading-relaxed"
+                        className="text-lg max-[426px]:text-base text-slate-400 leading-relaxed"
                     >
                         We build more than just websites. We create digital experiences that drive growth, 
                         scale with your business, and dominate your competition.
@@ -124,7 +122,7 @@ const DevelopmentApproach = ({ setContactOpen }) => {
                     
                     <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6">
                         <h4 className="text-2xl font-bold tracking-tight">Ready to build something extraordinary?</h4>
-                        <button className="px-8 py-3 bg-white text-slate-900 rounded-full font-bold flex items-center gap-2 hover:bg-blue-50 transition-colors duration-300 shadow-xl shadow-white/5 group">
+                        <button className="px-8 max-[769px]:px-4 py-3 bg-white text-slate-900 rounded-full font-bold flex items-center gap-2 hover:bg-blue-50 transition-colors duration-300 shadow-xl shadow-white/5 group">
                             Start Your Project
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>

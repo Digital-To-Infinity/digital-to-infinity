@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, BarChart3, TrendingUp, Users, Share2, MessageSquare, Zap, ArrowUpRight } from 'lucide-react';
+import { BarChart3, TrendingUp, Users, Share2 } from 'lucide-react';
 
 const SocialMediaStrategy = () => {
     const strategies = [
@@ -34,7 +34,7 @@ const SocialMediaStrategy = () => {
     ];
 
     return (
-        <section className="relative py-16 bg-slate-950 overflow-hidden">
+        <section className="relative py-16 max-[426px]:py-12 bg-slate-950 overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px] animate-pulse" />
@@ -50,14 +50,14 @@ const SocialMediaStrategy = () => {
                     transition={{ duration: 0.8 }}
                     className="flex flex-col items-center text-center mb-20"
                 >
-                    <h2 className="text-4xl md:text-7xl font-black text-white leading-[1.1] mb-8">
+                    <h2 className="text-7xl max-[769px]:text-[54px] max-[426px]:text-[36px] font-black text-white leading-[1.1] mb-8">
                         Strategic Social Media <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-blue-400 to-cyan-400">
                             That Drives Real Business.
                         </span>
                     </h2>
 
-                    <p className="text-xl text-slate-400 leading-relaxed max-w-6xl mx-auto">
+                    <p className="text-xl max-[426px]:text-lg text-slate-400 leading-relaxed max-w-6xl mx-auto">
                         We’re not just posting—we’re building pipelines. With a mix of creative storytelling, platform mastery, and data-backed decisions, our A-Team scales your social into a <span className="text-white font-semibold">predictable growth engine</span>. Whether you need conversions, brand love, or both—we make social deliver measurable business impact.
                     </p>
                 </motion.div>

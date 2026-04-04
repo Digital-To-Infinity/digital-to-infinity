@@ -35,9 +35,9 @@ const ServiceHero = ({ service, setContactOpen }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex flex-col items-center"
+                    className="flex flex-col items-center w-full"
                 >
-                    <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-slate-900 border border-slate-800 text-violet-400 text-sm font-bold tracking-wider uppercase mb-8 shadow-xl shadow-black/20">
+                    <div className="inline-flex items-center gap-3 px-5 max-[426px]:px-3 py-2.5 rounded-full bg-slate-900 border border-slate-800 text-violet-400 text-sm max-[426px]:text-xs font-bold tracking-wider uppercase mb-8">
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-violet-500"></span>
@@ -46,7 +46,7 @@ const ServiceHero = ({ service, setContactOpen }) => {
                         Premium {service.title} Agency
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight mb-8">
+                    <h1 className="text-7xl max-[769px]:text-5xl max-[426px]:text-[52px] font-black text-white leading-[1.1] tracking-tight mb-8">
                         Transform Your <br />
                         <span className="relative inline-block mt-2">
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 animate-gradient bg-[length:200%_auto]">
@@ -62,7 +62,7 @@ const ServiceHero = ({ service, setContactOpen }) => {
                         {service.desc} We don't just provide a service; we build a <span className="text-white font-semibold">performance-focused growth engine</span> that propels your brand to the next level of digital excellence.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-5 items-center justify-center">
+                    <div className="flex flex-col sm:flex-row gap-5 items-center sm:justify-center w-full max-[426px]:items-stretch">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.98 }}

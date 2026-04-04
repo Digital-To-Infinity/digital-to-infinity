@@ -1,9 +1,5 @@
 import { motion } from 'framer-motion';
-import {
-    LineChart, ShieldCheck, Database, LayoutDashboard,
-    MousePointer2, SearchCode, BarChart, Settings,
-    Zap, CheckCircle2, ArrowUpRight, Microscope
-} from 'lucide-react';
+import { ShieldCheck, LayoutDashboard, MousePointer2, Settings, ArrowUpRight, Microscope } from 'lucide-react';
 
 const AnalyticsAudit = () => {
     const auditSteps = [
@@ -45,7 +41,7 @@ const AnalyticsAudit = () => {
     ];
 
     return (
-        <section className="relative py-16 bg-white overflow-hidden">
+        <section className="relative py-16 lg:py-24 max-[769px]:py-8 max-[426px]:py-6 bg-white overflow-hidden">
             {/* Soft decorative elements */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[120px] -z-10" />
@@ -55,20 +51,20 @@ const AnalyticsAudit = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col lg:flex-row gap-8 items-top">
                     {/* Left Side: Content & Headline */}
-                    <div className="lg:w-1/3 sticky top-24">
+                    <div className="lg:w-1/3 lg:sticky lg:top-24">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-4xl md:text-[56px] font-black text-slate-900 leading-[1.2] mb-8">
-                                How We Turn <br />
+                            <h2 className="text-[56px] max-[426px]:text-[40px] font-black text-slate-900 leading-[1.2] mb-8 max-[426px]:mb-4 max-[769px]:text-center">
+                                How We Turn <br className='max-[769px]:hidden' />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">
-                                    Raw Data Into <br /> Revenue.
+                                    Raw Data Into <br className='max-[769px]:hidden' /> Revenue.
                                 </span>
                             </h2>
-                            <p className="text-lg text-slate-700 leading-relaxed mb-10">
+                            <p className="text-lg max-[426px]:text-base text-slate-700 leading-relaxed mb-10 max-[769px]:text-center">
                                 Most agencies provide numbers. We provide answers. Our multi-stage implementation process ensures your tracking is robust, your insights are actionable, and your growth is predictable.
                             </p>
 
@@ -143,10 +139,15 @@ const AnalyticsAudit = () => {
 
                     <div className="relative z-10">
                         <div className="flex items-center gap-4 mb-8">
-                            <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
-                                <Settings className="w-6 h-6 text-blue-400 animate-spin-slow" />
+                            <div className="w-14 max-[426px]:w-16 h-14 max-[426px]:h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                <motion.div
+                                    animate={{ rotate: 360 }}
+                                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                                >
+                                    <Settings className="w-6 h-6 text-blue-400" />
+                                </motion.div>
                             </div>
-                            <h4 className="text-3xl font-bold italic tracking-tight">The Loop of Continuous Optimization</h4>
+                            <h4 className="text-2xl font-bold italic tracking-tight">The Loop of Continuous Optimization</h4>
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -180,16 +181,6 @@ const AnalyticsAudit = () => {
                     </div>
                 </motion.div>
             </div>
-
-            <style jsx>{`
-                .animate-spin-slow {
-                    animation: spin 8s linear infinite;
-                }
-                @keyframes spin {
-                    from { transform: rotate(0deg); }
-                    to { transform: rotate(360deg); }
-                }
-            `}</style>
         </section>
     );
 };

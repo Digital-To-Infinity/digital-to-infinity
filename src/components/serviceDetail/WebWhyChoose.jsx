@@ -89,7 +89,7 @@ const WebWhyChoose = ({ setContactOpen }) => {
     };
 
     return (
-        <section className="py-16 bg-white overflow-hidden relative">
+        <section className="py-16 max-[426px]:py-12 bg-white overflow-hidden relative">
             {/* Subtle Gradient Orbs */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50/50 rounded-full blur-[100px] -z-10" />
             <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-violet-50/50 rounded-full blur-[100px] -z-10" />
@@ -100,16 +100,10 @@ const WebWhyChoose = ({ setContactOpen }) => {
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight"
+                        className="text-6xl max-[769px]:text-[52px] max-[426px]:text-[42px] font-bold text-slate-900 mb-6 max-[426px]:mb-2 tracking-tight"
                     >
                         Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-blue-600">Digital to Infinity?</span>
                     </motion.h2>
-                    <motion.div 
-                        initial={{ width: 0 }}
-                        whileInView={{ width: "80px" }}
-                        viewport={{ once: true }}
-                        className="h-1 bg-gradient-to-r from-violet-600 to-blue-600 mx-auto rounded-full shadow-[0_0_15px_rgba(124,58,237,0.3)]"
-                    />
                 </div>
 
                 <motion.div 

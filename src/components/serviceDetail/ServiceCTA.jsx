@@ -4,9 +4,9 @@ const ServiceCTA = ({ service, setContactOpen }) => {
     if (!service) return null;
 
     return (
-        <section className="py-16 bg-white relative overflow-hidden">
+        <section className="py-16 max-[426px]:py-12 bg-white relative overflow-hidden">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-[3rem] p-12 text-center relative overflow-hidden group">
+                <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-[3rem] p-12 max-[426px]:p-6 max-[426px]:py-8 text-center relative overflow-hidden group">
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none" />
                     <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight relative z-10">
                         Ready to scale your <br /> {service.title}?

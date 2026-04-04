@@ -10,7 +10,7 @@ const AIOSection = ({ setContactOpen }) => {
     ];
 
     return (
-        <section className="py-16 bg-white overflow-hidden">
+        <section className="py-16 max-[426px]:py-12 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Left Content */}
@@ -21,13 +21,13 @@ const AIOSection = ({ setContactOpen }) => {
                         transition={{ duration: 0.6 }}
                         className="flex flex-col gap-8"
                     >
-                        <div className="space-y-6">
+                        <div className="space-y-6 max-[426px]:space-y-4 max-[769px]:text-center">
                             <motion.h2 
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
-                                className="text-4xl md:text-6xl font-black text-slate-950 leading-[1.1] tracking-tight"
+                                className="text-6xl max-[426px]:text-[46px] font-black text-slate-950 leading-[1.1] tracking-tight"
                             >
                                 AI-Optimized <span className="text-violet-600">SEO</span>
                             </motion.h2>
@@ -37,7 +37,7 @@ const AIOSection = ({ setContactOpen }) => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 }}
-                                className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-xl font-medium"
+                                className="text-slate-600 text-lg md:text-xl max-[426px]:text-base leading-relaxed max-w-xl max-[769px]:max-w-5xl font-medium"
                             >
                                 AI is reshaping search, and we bring that power into your SEO campaigns. 
                                 Our AI-driven approach combines predictive analytics with human expertise 
@@ -55,7 +55,7 @@ const AIOSection = ({ setContactOpen }) => {
                             className="grid grid-cols-1 sm:grid-cols-2 gap-4"
                         >
                             {features.map((feature, index) => (
-                                <div key={index} className="flex items-start gap-3">
+                                <div key={index} className="flex items-start max-[769px]:items-center gap-3">
                                     <div className="mt-1 p-0.5 rounded-full bg-violet-100 text-violet-600">
                                         <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
                                     </div>

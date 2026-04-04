@@ -70,7 +70,7 @@ const ContentCreationTools = () => {
     };
 
     return (
-        <section className="py-16 bg-slate-950 relative overflow-hidden">
+        <section className="py-16 max-[426px]:py-12 bg-slate-950 relative overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute top-1/4 -left-20 w-80 h-80 bg-violet-600/10 rounded-full blur-[120px]" />
             <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px]" />
@@ -81,7 +81,7 @@ const ContentCreationTools = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight"
+                        className="text-7xl max-[426px]:text-[44px] font-bold text-white mb-6 max-[426px]:mb-2 tracking-tight leading-tight"
                     >
                         Creative <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400">Tech Stack</span>
                     </motion.h2>
@@ -91,7 +91,7 @@ const ContentCreationTools = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-slate-400 max-w-4xl mx-auto text-lg leading-relaxed"
+                        className="text-slate-400 max-w-4xl mx-auto text-lg max-[426px]:text-base leading-relaxed"
                     >
                         We utilize the industry's most powerful creative software to ensure your brand stands out with high-quality, professional-grade content that drives results.
                     </motion.p>

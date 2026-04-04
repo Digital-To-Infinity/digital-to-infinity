@@ -27,7 +27,7 @@ const ServiceBenefits = () => {
     ];
 
     return (
-        <section className="relative py-16 bg-slate-950 overflow-hidden">
+        <section className="relative py-16 lg:py-24 max-[769px]:py-8 max-[426px]:py-6 bg-slate-950 overflow-hidden">
             {/* Background Decorative Pulses */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                 <div className="absolute -top-24 -right-24 w-96 h-96 bg-violet-600/10 rounded-full blur-[100px] animate-pulse" />
@@ -50,13 +50,13 @@ const ServiceBenefits = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-black text-white"
+                        className="text-4xl md:text-5xl max-[769px]:text-6xl font-black text-white"
                     >
                         Core Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400">Guarantees</span>
                     </motion.h2>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid lg:grid-cols-3 gap-8">
                     {benefits.map((benefit, i) => (
                         <motion.div
                             key={i}

@@ -42,7 +42,7 @@ const SocialMediaTeam = ({ setContactOpen }) => {
     ];
 
     return (
-        <section className="relative py-16 overflow-hidden bg-white">
+        <section className="relative py-16 max-[426px]:py-12 overflow-hidden bg-white">
             <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left: Image */}
@@ -90,9 +90,9 @@ const SocialMediaTeam = ({ setContactOpen }) => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 className="text-4xl md:text-[53px] font-black text-slate-900 leading-[1.2] mb-2">
+                            <h2 className="text-4xl md:text-[53px] max-[426px]:text-[34px] font-black text-slate-900 leading-[1.2] mb-2">
                                 Grow Your Brand With <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">
+                                <span className="max-[426px]:text-[33px] text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">
                                     <span className='text-slate-900'>Our</span> Social Media Team.
                                 </span>
                             </h2>
@@ -119,7 +119,7 @@ const SocialMediaTeam = ({ setContactOpen }) => {
                                                 <Icon className="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <p className="text-lg text-slate-800 leading-snug">
+                                                <p className="text-lg max-[426px]:text-base text-slate-800 leading-snug">
                                                     <span className="font-bold">{feature.title}</span>{" "}
                                                     <span className="text-slate-500">{feature.desc}</span>
                                                 </p>

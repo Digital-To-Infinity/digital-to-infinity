@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { LineChart, PieChart, ExternalLink, Command, ShieldCheck, Zap, Target, Search } from 'lucide-react';
+import { LineChart, PieChart, ExternalLink, Command, Zap, Target, Search } from 'lucide-react';
 
 const SEOTools = () => {
     const tools = [
@@ -56,7 +56,7 @@ const SEOTools = () => {
     };
 
     return (
-        <section className="py-16 bg-slate-950 relative overflow-hidden">
+        <section className="py-16 max-[426px]:py-12 bg-slate-950 relative overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute top-1/4 -left-20 w-80 h-80 bg-violet-600/10 rounded-full blur-[120px]" />
             <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px]" />
@@ -67,7 +67,7 @@ const SEOTools = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight"
+                        className="text-6xl max-[769px]:text-5xl max-[426px]:text-[30px] font-bold text-white mb-6 max-[769px]:mb-2 tracking-tight leading-tight"
                     >
                         Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400">SEO Infrastructure</span>
                     </motion.h2>
@@ -77,7 +77,7 @@ const SEOTools = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-slate-400 max-w-4xl mx-auto text-lg leading-relaxed"
+                        className="text-slate-400 max-w-4xl mx-auto text-lg max-[426px]:text-base leading-relaxed"
                     >
                         We leverage the world's most powerful search intelligence tools to ensure your business stays ahead of the competition and dominates search results.
                     </motion.p>

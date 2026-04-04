@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { 
-    PenTool, ShieldCheck, RefreshCw, Briefcase, UserCircle, Sparkles, Layers, Zap, Compass, ArrowRight
+    PenTool, ShieldCheck, RefreshCw, Briefcase, UserCircle, Sparkles, Layers, Zap, Compass
 } from 'lucide-react';
 
 const BrandingProcess = ({ setContactOpen }) => {
@@ -28,7 +28,7 @@ const BrandingProcess = ({ setContactOpen }) => {
     ];
 
     return (
-        <section className="py-16 bg-white relative overflow-hidden">
+        <section className="py-16 max-[426px]:py-12 bg-white relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20" />
 
@@ -43,10 +43,10 @@ const BrandingProcess = ({ setContactOpen }) => {
                             viewport={{ once: true }}
                             className="mb-10"
                         >
-                            <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-4 tracking-tight">
+                            <h2 className="text-6xl max-[426px]:text-[35px] font-black text-slate-900 mb-4 tracking-tight">
                                 The Branding <span className="text-violet-600">Roadmap</span>
                             </h2>
-                            <p className="text-slate-700 text-xl">
+                            <p className="text-slate-700 text-xl max-[426px]:text-base">
                                 A structured 10-step journey from initial vision to long-term market excellence.
                             </p>
                         </motion.div>
@@ -75,7 +75,7 @@ const BrandingProcess = ({ setContactOpen }) => {
                     </div>
 
                     {/* Right: Core Services (Compact) */}
-                    <div className="lg:col-span-12 xl:col-span-5 bg-slate-50 rounded-[3rem] p-8 md:p-12 border border-slate-200/50 relative">
+                    <div className="lg:col-span-12 xl:col-span-5 bg-slate-50 rounded-[3rem] p-8 md:p-12 max-[426px]:p-6 border border-slate-200/50 relative">
                         <motion.div 
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
