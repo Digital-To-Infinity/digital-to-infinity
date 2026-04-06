@@ -27,6 +27,7 @@ import Audit from './pages/Audit';
 import SecondaryPlanPage from './pages/SecondaryPlanPage';
 import ServiceDetail from './pages/ServiceDetail';
 import Blogs from './pages/Blogs';
+import BlogDetailSubPage from './pages/BlogDetails';
 
 
 
@@ -91,6 +92,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
            <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:slug" element={<BlogDetailSubPage />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
