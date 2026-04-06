@@ -137,12 +137,12 @@ const BlogSidebar = ({ content }) => {
                                             className={`
                                                 group flex items-start gap-3 py-2.5 -ml-px border-l-2 transition-all duration-300 overflow-hidden
                                                 ${item.level === 2 ? "pl-4" : ""}
-                                                ${item.level === 3 ? "pl-8 text-[13px]" : ""}
-                                                ${item.level === 4 ? "pl-12 text-[12px]" : ""}
-                                                ${item.level === 5 ? "pl-14 text-[11px]" : ""}
-                                                ${item.level === 6 ? "pl-16 text-[10px]" : ""}
+                                                ${item.level === 3 ? "pl-4 text-[14px]" : ""}
+                                                ${item.level === 4 ? "pl-4 text-[13px]" : ""}
+                                                ${item.level === 5 ? "pl-4 text-[12px]" : ""}
+                                                ${item.level === 6 ? "pl-4 text-[11px]" : ""}
                                                 ${activeId === item.id
-                                                    ? "border-violet-600 text-slate-900 font-black bg-violet-50 rounded-r-lg"
+                                                    ? "border-violet-600 text-slate-900 font-bold bg-violet-50 rounded-r-lg"
                                                     : "border-transparent text-slate-500 hover:text-slate-900 hover:bg-slate-50 rounded-r-lg"}
                                             `}
                                         >

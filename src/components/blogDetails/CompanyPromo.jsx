@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, ArrowRight, Award, Users, ShieldCheck, Zap } from "lucide-react";
+import { Phone, ArrowRight, Zap } from "lucide-react";
+import ContactPopup from "../contact/ContactPopup";
 
 const CompanyPromo = () => {
+    const [isContactOpen, setContactOpen] = useState(false);
+
+    const handleCall = () => {
+        window.location.href = "tel:+919594222334";
+    };
+
     return (
         <div className="w-full h-fit sticky top-32">
             <aside className="w-72 mt-12 lg:mt-0">
@@ -28,7 +36,7 @@ const CompanyPromo = () => {
                     <div className="space-y-6 relative z-10 text-center">
                         <div>
                             <p className="text-[10px] font-black text-violet-400 uppercase tracking-[0.3em] mb-3">Scale Your Brand</p>
-                            <h5 className="text-xl font-bold text-white leading-tight">
+                            <h5 className="text-2xl font-bold text-white leading-tight">
                                 Ready to Achieve <br /> Infinite Growth?
                             </h5>
                         </div>
@@ -38,51 +46,31 @@ const CompanyPromo = () => {
                         </p>
 
                         <div className="pt-4 space-y-3">
-                            <button className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-black text-xs uppercase tracking-widest hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-violet-600/25 flex items-center justify-center gap-3 group/btn cursor-pointer">
+                            <button 
+                                onClick={() => setContactOpen(true)}
+                                className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-black text-xs uppercase tracking-widest hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-violet-600/25 flex items-center justify-center gap-3 group/btn cursor-pointer"
+                            >
                                 Get Free Audit
                                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                             </button>
 
-                            <button className="w-full py-4 px-6 rounded-2xl bg-white/5 border border-white/10 text-white font-black text-xs uppercase tracking-widest hover:bg-white/10 transition-all flex items-center justify-center gap-3 cursor-pointer">
+                            <button 
+                                onClick={handleCall}
+                                className="w-full py-4 px-6 rounded-2xl bg-white/5 border border-white/10 text-white font-black text-xs uppercase tracking-widest hover:bg-white/10 transition-all flex items-center justify-center gap-3 cursor-pointer"
+                            >
                                 <Phone className="w-4 h-4 text-violet-400" />
                                 Talk to Expert
                             </button>
                         </div>
                     </div>
-
-                    {/* Trust Stats */}
-                    <div className="mt-10 pt-10 border-t border-white/5 grid grid-cols-3 gap-2">
-                        {[
-                            {
-                                icon: Award,
-                                value: "98%",
-                                label: "Retention",
-                                color: "text-violet-400 bg-violet-400/10"
-                            },
-                            {
-                                icon: Users,
-                                value: "250+",
-                                label: "Clients",
-                                color: "text-indigo-400 bg-indigo-400/10"
-                            },
-                            {
-                                icon: ShieldCheck,
-                                value: "Top",
-                                label: "Agency",
-                                color: "text-emerald-400 bg-emerald-400/10"
-                            }
-                        ].map((item, idx) => (
-                            <div key={idx} className="flex flex-col items-center text-center">
-                                <div className={`w-10 h-10 rounded-xl ${item.color} flex items-center justify-center mb-3`}>
-                                    <item.icon size={18} />
-                                </div>
-                                <span className="block text-[12px] font-black text-white">{item.value}</span>
-                                <span className="block text-[8px] font-black text-slate-500 uppercase mt-1 tracking-wider">{item.label}</span>
-                            </div>
-                        ))}
-                    </div>
                 </motion.div>
             </aside>
+
+            {/* RENDER POPUP COMPONENT */}
+            <ContactPopup
+                isOpen={isContactOpen}
+                onClose={() => setContactOpen(false)}
+            />
         </div>
     );
 };

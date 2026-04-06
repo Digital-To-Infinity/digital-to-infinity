@@ -33,7 +33,7 @@ const BlogDetail = ({ post }) => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.1 }}
-                                className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight uppercase"
+                                className="text-4xl md:text-5xl lg:text-6xl max-[426px]:text-4xl font-black max-[426px]:font-extrabold text-slate-900 mb-8 leading-[1.1] tracking-tight uppercase"
                             >
                                 {post.title}
                             </motion.h1>

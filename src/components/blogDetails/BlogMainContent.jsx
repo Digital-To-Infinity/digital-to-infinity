@@ -48,14 +48,14 @@ const BlogMainContent = ({ content, tags }) => {
         <div className="flex-1 max-w-3xl text-left">
             <div
                 className="max-w-none 
-                    [&_h2]:text-slate-900 [&_h2]:font-black [&_h2]:tracking-tight [&_h2]:text-[24px] [&_h2]:mt-12 [&_h2]:mb-4 [&_h2]:leading-tight [&_h2]:uppercase [&_h2]:scroll-mt-[100px] max-[426px]:[&_h2]:text-[20px] max-[426px]:[&_h2]:mt-8 max-[426px]:[&_h2]:mb-3
-                    [&_h3]:text-slate-900 [&_h3]:font-black [&_h3]:tracking-tight [&_h3]:text-[20px] [&_h3]:mt-10 [&_h3]:mb-4 [&_h3]:leading-tight [&_h3]:uppercase [&_h3]:scroll-mt-[100px] max-[426px]:[&_h3]:text-[18px] max-[426px]:[&_h3]:mt-7 max-[426px]:[&_h3]:mb-2
-                    [&_h4]:text-violet-600 [&_h4]:font-black [&_h4]:tracking-tight [&_h4]:text-[16px] [&_h4]:mt-8 [&_h4]:mb-2 [&_h4]:leading-tight [&_h4]:uppercase [&_h4]:scroll-mt-[100px] max-[426px]:[&_h4]:text-[15px] max-[426px]:[&_h4]:mt-6 max-[426px]:[&_h4]:mb-1
+                    [&_h2]:text-black [&_h2]:font-black [&_h2]:tracking-tight [&_h2]:text-[24px] [&_h2]:mt-12 [&_h2]:mb-4 [&_h2]:leading-tight [&_h2]:uppercase [&_h2]:scroll-mt-[100px] max-[426px]:[&_h2]:text-[20px] max-[426px]:[&_h2]:mt-8 max-[426px]:[&_h2]:mb-3
+                    [&_h3]:text-black [&_h3]:font-black [&_h3]:tracking-tight [&_h3]:text-[20px] [&_h3]:mt-10 [&_h3]:mb-4 [&_h3]:leading-tight [&_h3]:uppercase [&_h3]:scroll-mt-[100px] max-[426px]:[&_h3]:text-[18px] max-[426px]:[&_h3]:mt-7 max-[426px]:[&_h3]:mb-2
+                    [&_h4]:text-black [&_h4]:font-black [&_h4]:tracking-tight [&_h4]:text-[16px] [&_h4]:mt-8 [&_h4]:mb-2 [&_h4]:leading-tight [&_h4]:uppercase [&_h4]:scroll-mt-[100px] max-[426px]:[&_h4]:text-[15px] max-[426px]:[&_h4]:mt-6 max-[426px]:[&_h4]:mb-1
                     [&_p]:text-slate-600 [&_p]:leading-[1.8] [&_p]:mb-6 [&_p]:mt-0 [&_p]:text-[18px] max-[426px]:[&_p]:text-[16px] max-[426px]:[&_p]:mb-4 max-[426px]:[&_p]:leading-[1.6]
-                    [&_strong]:text-slate-900 [&_strong]:font-bold
-                    [&_blockquote]:border-l-[6px] max-[426px]:[&_blockquote]:border-l-[4px] [&_blockquote]:border-violet-600 [&_blockquote]:bg-violet-600/5 [&_blockquote]:py-8 [&_blockquote]:px-10 [&_blockquote]:rounded-r-[2rem] [&_blockquote]:not-italic [&_blockquote]:my-16 [&_blockquote]:text-xl [&_blockquote]:font-medium [&_blockquote]:text-slate-800 max-[426px]:[&_blockquote]:py-2 max-[426px]:[&_blockquote]:px-4 max-[426px]:[&_blockquote]:my-8 max-[426px]:[&_blockquote]:text-base max-[426px]:[&_blockquote]:rounded-r-[1rem]
+                    [&_strong]:text-black [&_strong]:font-bold
+                    [&_blockquote]:border-l-[6px] max-[426px]:[&_blockquote]:border-l-[4px] [&_blockquote]:border-violet-600 [&_blockquote]:bg-violet-600/5 [&_blockquote]:py-4 [&_blockquote]:px-4 [&_blockquote]:not-italic [&_blockquote]:my-16 [&_blockquote]:text-lg [&_blockquote]:font-medium [&_blockquote]:text-black max-[426px]:[&_blockquote]:py-2 max-[426px]:[&_blockquote]:my-8 max-[426px]:[&_blockquote]:text-base max-[426px]:[&_blockquote]:rounded-r-[1rem]
                     [&_li]:text-slate-600 [&_li]:mb-4 [&_li]:text-[17px] [&_li]:leading-relaxed max-[426px]:[&_li]:text-[15px] max-[426px]:[&_li]:mb-2
-                    [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-10 [&_ul]:mt-0 [&_ul]:marker:text-violet-600 max-[426px]:[&_ul]:pl-4 max-[426px]:[&_ul]:mb-6
+                    [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-10 [&_ul]:mt-0 [&_ul]:marker:text-black max-[426px]:[&_ul]:pl-4 max-[426px]:[&_ul]:mb-6
                     [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-10 [&_ol]:mt-0 [&_ol]:marker:text-violet-600 max-[426px]:[&_ol]:pl-4 max-[426px]:[&_ol]:mb-6
                     [&_img]:rounded-[2.5rem] [&_img]:my-12 [&_img]:w-full [&_img]:h-auto hover:[&_img]:scale-[1.01] [&_img]:transition-transform [&_img]:duration-500 max-[426px]:[&_img]:my-6 max-[426px]:[&_img]:rounded-[1.5rem]
                     [&_a]:text-violet-600 [&_a]:underline [&_a]:underline-offset-2 [&_a]:font-bold"
