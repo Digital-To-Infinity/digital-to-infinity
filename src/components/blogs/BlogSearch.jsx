@@ -16,7 +16,7 @@ const BlogSearch = ({ searchQuery, setSearchQuery }) => {
                     
                     <div className="relative flex items-center bg-slate-50 border border-slate-200 rounded-full p-2 focus-within:border-violet-600/30 focus-within:bg-white focus-within:shadow-2xl focus-within:shadow-violet-600/5 transition-all duration-300">
                         {/* Icon */}
-                        <div className="p-3 text-slate-500 group-focus-within:text-violet-600 transition-colors">
+                        <div className="p-3 max-[426px]:p-2 text-slate-500 group-focus-within:text-violet-600 transition-colors">
                             <Search size={22} strokeWidth={2.5} />
                         </div>
 
@@ -26,7 +26,7 @@ const BlogSearch = ({ searchQuery, setSearchQuery }) => {
                             placeholder="Search for articles, strategies, or insights..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full bg-transparent border-none outline-none text-black placeholder:text-slate-500 font-medium py-1 px-2 text-lg"
+                            className="w-full bg-transparent border-none outline-none text-black placeholder:text-slate-500 font-medium py-1 px-2 text-lg max-[426px]:text-base"
                         />
 
                         {/* Clear Functionality */}

@@ -53,7 +53,7 @@ const BlogsHero = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        className="text-8xl font-black text-white leading-[1.05] tracking-tight mb-10"
+                        className="text-8xl max-[426px]:text-[52px] font-black text-white leading-[1.05] tracking-tight mb-10"
                     >
                         Mastering the <br />
                         <span className="relative inline-block mt-4">
@@ -79,7 +79,7 @@ const BlogsHero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                        className="text-lg md:text-xl text-slate-400 max-w-5xl mx-auto leading-relaxed mb-12 font-medium"
+                        className="text-lg md:text-xl max-[426px]:text-base text-slate-400 max-w-5xl max-[426px]:w-full mx-auto leading-relaxed mb-12 font-medium"
                     >
                         Dive deep into our latest thoughts on marketing, technology, and branding. We transform complex data into actionable strategies for <span className="text-white font-semibold">infinite growth</span>.
                     </motion.p>
@@ -91,7 +91,7 @@ const BlogsHero = () => {
                             rotate: [0, 5, 0]
                         }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute top-1/4 left-10 md:left-20 pointer-events-none"
+                        className="absolute top-1/4 max-[769px]:hidden left-10 md:left-20 pointer-events-none"
                     >
                         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 blur-sm" />
                     </motion.div>
@@ -102,7 +102,7 @@ const BlogsHero = () => {
                             rotate: [0, -5, 0]
                         }}
                         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute bottom-1/4 right-10 md:right-20 pointer-events-none"
+                        className="absolute max-[769px]:hidden bottom-1/4 right-10 md:right-20 pointer-events-none"
                     >
                         <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 blur-md" />
                     </motion.div>

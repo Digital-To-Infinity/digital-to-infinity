@@ -28,7 +28,7 @@ export default function BlogFilters({ activeCategory, setActiveCategory }) {
 
 
     return (
-        <section className="bg-white py-4 relative z-20">
+        <section className="bg-white py-4 max-[426px]:py-2 relative z-20">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     {/* Compact Filter Scroll */}

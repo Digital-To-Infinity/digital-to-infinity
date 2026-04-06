@@ -28,7 +28,7 @@ const BlogGrid = ({ searchQuery, setSearchQuery, activeCategory, setActiveCatego
     });
 
     return (
-        <section id="blog-posts" className="bg-white py-16 relative overflow-hidden">
+        <section id="blog-posts" className="bg-white py-16 max-[426px]:py-8 relative overflow-hidden">
             {/* Animated Background Accents */}
             <motion.div
                 animate={{
@@ -83,7 +83,7 @@ const BlogGrid = ({ searchQuery, setSearchQuery, activeCategory, setActiveCatego
                             <p className="text-slate-600 font-medium max-w-sm mb-12 opacity-60 leading-relaxed">
                                 We couldn't find any articles matching "{searchQuery || activeCategory}". Try broadening your search or choosing another category.
                             </p>
-                            
+
                             <button
                                 onClick={() => {
                                     setSearchQuery("");
@@ -120,10 +120,8 @@ const BlogGrid = ({ searchQuery, setSearchQuery, activeCategory, setActiveCatego
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="flex flex-col items-center mt-20"
+                        className="flex flex-col items-center mt-20 max-[426px]:mt-12"
                     >
-                        <div className="w-px h-20 bg-gradient-to-b from-violet-600/0 via-violet-600/20 to-violet-600/0 mb-8" />
-
                         <button className="group relative cursor-pointer outline-none">
                             <div className="absolute inset-0 bg-violet-600/20 rounded-[2rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="relative px-16 py-4 bg-white border-2 border-slate-100 text-slate-900 font-black rounded-[2rem] group-hover:border-violet-600 group-hover:text-violet-600 transition-all duration-500 shadow-sm overflow-hidden flex items-center gap-4">
