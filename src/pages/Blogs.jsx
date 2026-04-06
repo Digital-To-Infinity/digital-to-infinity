@@ -16,19 +16,19 @@ const Blogs = () => {
             <Navbar />
             <main>
                 <BlogsHero />
-                
-                <BlogSearch 
-                    searchQuery={searchQuery} 
-                    setSearchQuery={setSearchQuery} 
+
+                <BlogSearch
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
                 />
 
-                <BlogFilters 
-                    activeCategory={activeCategory} 
-                    setActiveCategory={setActiveCategory} 
+                <BlogFilters
+                    activeCategory={activeCategory}
+                    setActiveCategory={setActiveCategory}
                 />
-                
-                <BlogGrid 
-                    searchQuery={searchQuery} 
+
+                <BlogGrid
+                    searchQuery={searchQuery}
                     setSearchQuery={setSearchQuery}
                     activeCategory={activeCategory}
                     setActiveCategory={setActiveCategory}
@@ -41,4 +41,4 @@ const Blogs = () => {
     )
 }
 
-export default Blogs;
+export default Blogs;

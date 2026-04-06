@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Sparkles, BookOpen, Clock, User } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { useRef } from 'react';
 
 const BlogsHero = () => {
@@ -91,7 +91,7 @@ const BlogsHero = () => {
                             rotate: [0, 5, 0]
                         }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute top-1/4 left-10 md:left-20 pointer-events-none opacity-20 md:opacity-40"
+                        className="absolute top-1/4 left-10 md:left-20 pointer-events-none"
                     >
                         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 blur-sm" />
                     </motion.div>
@@ -102,7 +102,7 @@ const BlogsHero = () => {
                             rotate: [0, -5, 0]
                         }}
                         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute bottom-1/4 right-10 md:right-20 pointer-events-none opacity-20 md:opacity-40"
+                        className="absolute bottom-1/4 right-10 md:right-20 pointer-events-none"
                     >
                         <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 blur-md" />
                     </motion.div>

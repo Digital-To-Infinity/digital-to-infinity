@@ -89,7 +89,7 @@ const BlogGrid = ({ searchQuery, setSearchQuery, activeCategory, setActiveCatego
                                     setSearchQuery("");
                                     setActiveCategory("All");
                                 }}
-                                className="group relative flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-2xl font-black hover:bg-violet-600 transition-all duration-500 shadow-xl shadow-black/10 hover:shadow-violet-600/20 mb-20 cursor-pointer"
+                                className="group relative flex items-center gap-3 bg-slate-950 text-white px-8 py-4 rounded-2xl font-black hover:bg-violet-600 transition-all duration-500 shadow-xl shadow-black/10 hover:shadow-violet-600/20 mb-20 cursor-pointer"
                             >
                                 Reset All Filters
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
